@@ -1,7 +1,7 @@
-﻿#ifndef GF4CPP_MAIN_GAMECONFIG_H
-#define GF4CPP_MAIN_GAMECONFIG_H
+﻿#ifndef GF4CPP_BOOT_GAMECONFIG_H
+#define GF4CPP_BOOT_GAMECONFIG_H
 
-#include "gf/main/gameconfig.h"
+#include "gf/boot/gameconfig.h"
 #include "gf4cpp/util/struct.h"
 
 GF4CPPSTRUCT( gf, GameConfig )
@@ -24,4 +24,4 @@ namespace gf {
     }
 }
 
-#endif  // GF4CPP_MAIN_GAMECONFIG_H
+#endif  // GF4CPP_BOOT_GAMECONFIG_H
