@@ -25,7 +25,7 @@ namespace gf {
             T   _obj
         ) const
         {
-            gfFree( _obj );
+            gfFree( *_obj );
         }
     };
 

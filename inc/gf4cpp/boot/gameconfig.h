@@ -2,9 +2,21 @@
 #define GF4CPP_BOOT_GAMECONFIG_H
 
 #include "gf/boot/gameconfig.h"
-#include "gf4cpp/util/struct.h"
+#include "gf4cpp/common/functional.h"
 
-GF4CPPSTRUCT( gf, GameConfig )
+namespace gf {
+    typedef GfGameConfig GameConfig;
+}
+
+template<>
+inline void gfFree(
+    gf::GameConfig &    _gameConfig
+)
+{
+    gfGameConfigFree(
+        &_gameConfig
+    );
+}
 
 namespace gf {
     inline GameConfig * newGameConfig(
@@ -18,9 +30,7 @@ namespace gf {
         GameConfig &    _gameConfig
     )
     {
-        return gfGameConfigFree(
-            &_gameConfig
-        );
+        gfFree( _gameConfig );
     }
 }
 

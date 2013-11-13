@@ -1,10 +1,23 @@
-﻿#ifndef GF4CPP_COMMON_STRINGCONVERTER_H
-#define GF4CPP_COMMON_STRINGCONVERTER_H
+﻿#ifndef GF4CPP_COMMON_STRING_H
+#define GF4CPP_COMMON_STRING_H
 
+#include "gf/common/string.h"
 #include "gf4cpp/common/primitives.h"
 #include "gf/util/import.h"
 
+#include <string>
+
 namespace gf {
+    typedef GfStringChar StringChar;
+    typedef GfUtf8Char Utf8Char;
+    typedef GfUtf16Char Utf16Char;
+    typedef GfUtf32Char Utf32Char;
+
+    typedef std::basic_string< StringChar > String;
+    typedef std::basic_string< Utf8Char > Utf8;
+    typedef std::basic_string< Utf16Char > Utf16;
+    typedef std::basic_string< Utf32Char > Utf32;
+
     GFEXPORT Bool fromString(
         Utf8 &
         , const String &
@@ -66,4 +79,4 @@ namespace gf {
     );
 }
 
-#endif  // GF4CPP_COMMON_STRINGCONVERTER_H
+#endif  // GF4CPP_COMMON_STRING_H
