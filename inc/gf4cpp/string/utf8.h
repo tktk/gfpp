@@ -190,6 +190,24 @@ namespace gf {
             _utf8
         );
     }
+
+    inline const Utf8Char * getPtr(
+        const Utf8 &    _UTF8
+    )
+    {
+        return gfUtf8GetPtr(
+            &_UTF8
+        );
+    }
+
+    inline Size getLength(
+        const Utf8 &    _UTF8
+    )
+    {
+        return gfUtf8GetLength(
+            &_UTF8
+        );
+    }
 }
 
 #endif  // GF4CPP_STRING_UTF8_H

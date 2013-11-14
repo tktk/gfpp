@@ -190,6 +190,24 @@ namespace gf {
             _string
         );
     }
+
+    inline const StringChar * getPtr(
+        const String &  _STRING
+    )
+    {
+        return gfStringGetPtr(
+            &_STRING
+        );
+    }
+
+    inline Size getLength(
+        const String &  _STRING
+    )
+    {
+        return gfStringGetLength(
+            &_STRING
+        );
+    }
 }
 
 #endif  // GF4CPP_STRING_STRING_H

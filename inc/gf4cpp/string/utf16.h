@@ -190,6 +190,24 @@ namespace gf {
             _utf16
         );
     }
+
+    inline const Utf16Char * getPtr(
+        const Utf16 &  _UTF16
+    )
+    {
+        return gfUtf16GetPtr(
+            &_UTF16
+        );
+    }
+
+    inline Size getLength(
+        const Utf16 &  _UTF16
+    )
+    {
+        return gfUtf16GetLength(
+            &_UTF16
+        );
+    }
 }
 
 #endif  // GF4CPP_STRING_UTF16_H
