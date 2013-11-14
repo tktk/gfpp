@@ -19,6 +19,11 @@ namespace gf {
 
     typedef GfFloat Float;
     typedef GfDouble Double;
+
+    typedef GfStringChar StringChar;
+    typedef GfUtf8Char Utf8Char;
+    typedef GfUtf16Char Utf16Char;
+    typedef GfUtf32Char Utf32Char;
 }
 
 #endif  // GF4CPP_COMMON_PRIMITIVES_H
