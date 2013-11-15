@@ -35,6 +35,28 @@ namespace gf {
         gfFree( _gameConfig );
     }
 
+    inline gf::Bool setBinDir(
+        GameConfig &        _gameConfig
+        , const gf::Utf32 & _BIN_DIR
+    )
+    {
+        return gfGameConfigSetBinDir(
+            &_gameConfig
+            , &_BIN_DIR
+        );
+    }
+
+    inline gf::Bool setMainFile(
+        GameConfig &        _gameConfig
+        , const gf::Utf32 & _MAIN_FILE
+    )
+    {
+        return gfGameConfigSetMainFile(
+            &_gameConfig
+            , &_MAIN_FILE
+        );
+    }
+
     inline gf::Bool setMain(
         GameConfig &        _gameConfig
         , const gf::Utf32 & _MAIN
@@ -43,17 +65,6 @@ namespace gf {
         return gfGameConfigSetMain(
             &_gameConfig
             , &_MAIN
-        );
-    }
-
-    inline gf::Bool setMainPath(
-        GameConfig &        _gameConfig
-        , const gf::Utf32 & _MAIN_PATH
-    )
-    {
-        return gfGameConfigSetMainPath(
-            &_gameConfig
-            , &_MAIN_PATH
         );
     }
 }
