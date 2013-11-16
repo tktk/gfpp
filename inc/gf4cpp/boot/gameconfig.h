@@ -35,9 +35,18 @@ namespace gf {
         gfFree( _gameConfig );
     }
 
-    inline gf::Bool setBinDir(
-        GameConfig &        _gameConfig
-        , const gf::Utf32 & _BIN_DIR
+    inline const Utf32 * getBinDir(
+        const GameConfig &  _GAME_CONFIG
+    )
+    {
+        return gfGameConfigGetBinDir(
+            &_GAME_CONFIG
+        );
+    }
+
+    inline Bool setBinDir(
+        GameConfig &    _gameConfig
+        , const Utf32 & _BIN_DIR
     )
     {
         return gfGameConfigSetBinDir(
@@ -46,9 +55,18 @@ namespace gf {
         );
     }
 
-    inline gf::Bool setMainFile(
-        GameConfig &        _gameConfig
-        , const gf::Utf32 & _MAIN_FILE
+    inline const Utf32 * getMainFile(
+        const GameConfig &  _GAME_CONFIG
+    )
+    {
+        return gfGameConfigGetMainFile(
+            &_GAME_CONFIG
+        );
+    }
+
+    inline Bool setMainFile(
+        GameConfig &    _gameConfig
+        , const Utf32 & _MAIN_FILE
     )
     {
         return gfGameConfigSetMainFile(
@@ -57,9 +75,18 @@ namespace gf {
         );
     }
 
-    inline gf::Bool setMain(
-        GameConfig &        _gameConfig
-        , const gf::Utf32 & _MAIN
+    inline const Utf32 * getMain(
+        const GameConfig &  _GAME_CONFIG
+    )
+    {
+        return gfGameConfigGetMain(
+            &_GAME_CONFIG
+        );
+    }
+
+    inline Bool setMain(
+        GameConfig &    _gameConfig
+        , const Utf32 & _MAIN
     )
     {
         return gfGameConfigSetMain(
