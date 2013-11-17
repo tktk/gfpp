@@ -23,11 +23,19 @@ namespace gf {
 
     GFEXPORT String * newString(
         const StringChar *
+    );
+
+    GFEXPORT String * newString(
+        const StringChar *
         , Size
     );
 
     GFEXPORT String * newStringFromUnicode(
         const Utf8 &
+    );
+
+    GFEXPORT String * newStringFromUnicode(
+        const Utf8Char *
     );
 
     GFEXPORT String * newStringFromUnicode(
@@ -41,11 +49,19 @@ namespace gf {
 
     GFEXPORT String * newStringFromUnicode(
         const Utf16Char *
+    );
+
+    GFEXPORT String * newStringFromUnicode(
+        const Utf16Char *
         , Size
     );
 
     GFEXPORT String * newStringFromUnicode(
         const Utf32 &
+    );
+
+    GFEXPORT String * newStringFromUnicode(
+        const Utf32Char *
     );
 
     GFEXPORT String * newStringFromUnicode(
@@ -73,12 +89,22 @@ namespace gf {
     GFEXPORT Bool assign(
         String &
         , const StringChar *
+    );
+
+    GFEXPORT Bool assign(
+        String &
+        , const StringChar *
         , Size
     );
 
     GFEXPORT Bool assignFromUnicode(
         String &
         , const Utf8 &
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        String &
+        , const Utf8Char *
     );
 
     GFEXPORT Bool assignFromUnicode(
@@ -95,12 +121,22 @@ namespace gf {
     GFEXPORT Bool assignFromUnicode(
         String &
         , const Utf16Char *
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        String &
+        , const Utf16Char *
         , Size
     );
 
     GFEXPORT Bool assignFromUnicode(
         String &
         , const Utf32 &
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        String &
+        , const Utf32Char *
     );
 
     GFEXPORT Bool assignFromUnicode(
