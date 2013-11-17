@@ -15,7 +15,8 @@ namespace gf {
 #include "gf/util/import.h"
 
 namespace gf {
-    GFEXPORT Utf16 * newUtf16();
+    GFEXPORT Utf16 * newUtf16(
+    );
 
     GFEXPORT Utf16 * clone(
         const Utf16 &

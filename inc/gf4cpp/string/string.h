@@ -15,7 +15,8 @@ namespace gf {
 #include "gf/util/import.h"
 
 namespace gf {
-    GFEXPORT String * newString();
+    GFEXPORT String * newString(
+    );
 
     GFEXPORT String * clone(
         const String &
