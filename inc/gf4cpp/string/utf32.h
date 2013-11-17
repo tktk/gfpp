@@ -12,226 +12,112 @@ namespace gf {
 #include "gf4cpp/string/utf16.h"
 #include "gf4cpp/common/functional.h"
 #include "gf4cpp/common/primitives.h"
+#include "gf/util/import.h"
+
+namespace gf {
+    GFEXPORT Utf32 * newUtf32();
+
+    GFEXPORT Utf32 * clone(
+        const Utf32 &
+    );
+
+    GFEXPORT Utf32 * newUtf32(
+        const Utf32Char *
+        , Size
+    );
+
+    GFEXPORT Utf32 * newUtf32FromString(
+        const String &
+    );
+
+    GFEXPORT Utf32 * newUtf32FromString(
+        const StringChar *
+        , Size
+    );
+
+    GFEXPORT Utf32 * newUtf32FromUnicode(
+        const Utf8 &
+    );
+
+    GFEXPORT Utf32 * newUtf32FromUnicode(
+        const Utf8Char *
+        , Size
+    );
+
+    GFEXPORT Utf32 * newUtf32FromUnicode(
+        const Utf16 &
+    );
+
+    GFEXPORT Utf32 * newUtf32FromUnicode(
+        const Utf16Char *
+        , Size
+    );
+
+    GFEXPORT void free(
+        Utf32 &
+    );
+
+    GFEXPORT const Utf32Char * getPtr(
+        const Utf32 &
+    );
+
+    GFEXPORT Size getLength(
+        const Utf32 &
+    );
+
+    GFEXPORT Bool assign(
+        Utf32 &
+        , const Utf32 &
+    );
+
+    GFEXPORT Bool assign(
+        Utf32 &
+        , const Utf32Char *
+        , Size
+    );
+
+    GFEXPORT Bool assignFromString(
+        Utf32 &
+        , const String &
+    );
+
+    GFEXPORT Bool assignFromString(
+        Utf32 &
+        , const StringChar *
+        , Size
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        Utf32 &
+        , const Utf8 &
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        Utf32 &
+        , const Utf8Char *
+        , Size
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        Utf32 &
+        , const Utf16 &
+    );
+
+    GFEXPORT Bool assignFromUnicode(
+        Utf32 &
+        , const Utf16Char *
+        , Size
+    );
+}
 
 template<>
 inline void gfFree(
     gf::Utf32 & _utf32
 )
 {
-    gfUtf32Free(
-        &_utf32
+    gf::free(
+        _utf32
     );
-}
-
-namespace gf {
-    inline Utf32 * newUtf32(
-    )
-    {
-        return gfUtf32New();
-    }
-
-    inline Utf32 * clone(
-        const Utf32 &   _UTF32
-    )
-    {
-        return gfUtf32Clone(
-            &_UTF32
-        );
-    }
-
-    inline Utf32 * newUtf32(
-        const Utf32Char *   _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32NewFromCharPtr(
-            _FROM
-            , _length
-        );
-    }
-
-    inline Utf32 * newUtf32FromString(
-        const String &  _FROM
-    )
-    {
-        return gfUtf32NewFromString(
-            &_FROM
-        );
-    }
-
-    inline Utf32 * newUtf32FromString(
-        const StringChar *  _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32NewFromStringCharPtr(
-            _FROM
-            , _length
-        );
-    }
-
-    inline Utf32 * newUtf32FromUnicode(
-        const Utf8 &    _FROM
-    )
-    {
-        return gfUtf32NewFromUtf8(
-            &_FROM
-        );
-    }
-
-    inline Utf32 * newUtf32FromUnicode(
-        const Utf8Char *    _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32NewFromUtf8CharPtr(
-            _FROM
-            , _length
-        );
-    }
-
-    inline Utf32 * newUtf32FromUnicode(
-        const Utf16 &   _FROM
-    )
-    {
-        return gfUtf32NewFromUtf16(
-            &_FROM
-        );
-    }
-
-    inline Utf32 * newUtf32FromUnicode(
-        const Utf16Char *   _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32NewFromUtf16CharPtr(
-            _FROM
-            , _length
-        );
-    }
-
-    inline void free(
-        Utf32 & _utf32
-    )
-    {
-        return gfFree(
-            _utf32
-        );
-    }
-
-    inline const Utf32Char * getPtr(
-        const Utf32 &  _UTF32
-    )
-    {
-        return gfUtf32GetPtr(
-            &_UTF32
-        );
-    }
-
-    inline Size getLength(
-        const Utf32 &  _UTF32
-    )
-    {
-        return gfUtf32GetLength(
-            &_UTF32
-        );
-    }
-
-    inline Bool assign(
-        Utf32 &         _to
-        , const Utf32 & _FROM
-    )
-    {
-        return gfUtf32Assign(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool assign(
-        Utf32 &             _to
-        , const Utf32Char * _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32AssignFromCharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool assignFromString(
-        Utf32 &             _to
-        , const String &    _FROM
-    )
-    {
-        return gfUtf32AssignFromString(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool assignFromString(
-        Utf32 &                 _to
-        , const StringChar *    _FROM
-        , Size                  _length
-    )
-    {
-        return gfUtf32AssignFromStringCharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool assignFromUnicode(
-        Utf32 &         _to
-        , const Utf8 &  _FROM
-    )
-    {
-        return gfUtf32AssignFromUtf8(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool assignFromUnicode(
-        Utf32 &             _to
-        , const Utf8Char *  _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32AssignFromUtf8CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool assignFromUnicode(
-        Utf32 &         _to
-        , const Utf16 & _FROM
-    )
-    {
-        return gfUtf32AssignFromUtf16(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool assignFromUnicode(
-        Utf32 &             _to
-        , const Utf16Char * _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf32AssignFromUtf16CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
 }
 
 #endif  // GF4CPP_STRING_UTF32_H
