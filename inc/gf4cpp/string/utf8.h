@@ -24,78 +24,6 @@ inline void gfFree(
 }
 
 namespace gf {
-    inline Bool toUtf8(
-        Utf8 &              _to
-        , const String &    _FROM
-    )
-    {
-        return gfUtf8FromString(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool toUtf8FromString(
-        Utf8 &                  _to
-        , const StringChar *    _FROM
-        , Size                  _length
-    )
-    {
-        return gfUtf8FromStringCharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool toUtf8(
-        Utf8 &          _to
-        , const Utf16 & _FROM
-    )
-    {
-        return gfUtf8FromUtf16(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool toUtf8FromUnicode(
-        Utf8 &              _to
-        , const Utf16Char * _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf8FromUtf16CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool toUtf8(
-        Utf8 &          _to
-        , const Utf32 & _FROM
-    )
-    {
-        return gfUtf8FromUtf32(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool toUtf8FromUnicode(
-        Utf8 &              _to
-        , const Utf32Char * _FROM
-        , Size              _length
-    )
-    {
-        return gfUtf8FromUtf32CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
     inline Utf8 * newUtf8(
     )
     {
@@ -122,7 +50,7 @@ namespace gf {
         );
     }
 
-    inline Utf8 * newUtf8(
+    inline Utf8 * newUtf8FromString(
         const String &  _FROM
     )
     {
@@ -142,7 +70,7 @@ namespace gf {
         );
     }
 
-    inline Utf8 * newUtf8(
+    inline Utf8 * newUtf8FromUnicode(
         const Utf16 &   _FROM
     )
     {
@@ -162,7 +90,7 @@ namespace gf {
         );
     }
 
-    inline Utf8 * newUtf8(
+    inline Utf8 * newUtf8FromUnicode(
         const Utf32 &   _FROM
     )
     {
@@ -206,6 +134,102 @@ namespace gf {
     {
         return gfUtf8GetLength(
             &_UTF8
+        );
+    }
+
+    inline Bool assign(
+        Utf8 &          _to
+        , const Utf8 &  _FROM
+    )
+    {
+        return gfUtf8Assign(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assign(
+        Utf8 &              _to
+        , const Utf8Char *  _FROM
+        , Size              _length
+    )
+    {
+        return gfUtf8AssignFromCharPtr(
+            &_to
+            , _FROM
+            , _length
+        );
+    }
+
+    inline Bool assignFromString(
+        Utf8 &              _to
+        , const String &    _FROM
+    )
+    {
+        return gfUtf8AssignFromString(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assignFromString(
+        Utf8 &                  _to
+        , const StringChar *    _FROM
+        , Size                  _length
+    )
+    {
+        return gfUtf8AssignFromStringCharPtr(
+            &_to
+            , _FROM
+            , _length
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        Utf8 &          _to
+        , const Utf16 & _FROM
+    )
+    {
+        return gfUtf8AssignFromUtf16(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        Utf8 &              _to
+        , const Utf16Char * _FROM
+        , Size              _length
+    )
+    {
+        return gfUtf8AssignFromUtf16CharPtr(
+            &_to
+            , _FROM
+            , _length
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        Utf8 &          _to
+        , const Utf32 & _FROM
+    )
+    {
+        return gfUtf8AssignFromUtf32(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        Utf8 &              _to
+        , const Utf32Char * _FROM
+        , Size              _length
+    )
+    {
+        return gfUtf8AssignFromUtf32CharPtr(
+            &_to
+            , _FROM
+            , _length
         );
     }
 }
