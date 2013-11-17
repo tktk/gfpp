@@ -139,7 +139,7 @@ namespace gf {
         Utf16 &
         , const Utf32Char *
     );
-}
+
     GFEXPORT Bool assignFromUnicode(
         Utf16 &
         , const Utf32Char *
