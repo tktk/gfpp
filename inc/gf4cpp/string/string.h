@@ -24,78 +24,6 @@ inline void gfFree(
 }
 
 namespace gf {
-    inline Bool toString(
-        String &        _to
-        , const Utf8 &  _FROM
-    )
-    {
-        return gfStringFromUtf8(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool toStringFromUnicode(
-        String &            _to
-        , const Utf8Char *  _FROM
-        , Size              _length
-    )
-    {
-        return gfStringFromUtf8CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool toString(
-        String &        _to
-        , const Utf16 & _FROM
-    )
-    {
-        return gfStringFromUtf16(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool toStringFromUnicode(
-        String &            _to
-        , const Utf16Char * _FROM
-        , Size              _length
-    )
-    {
-        return gfStringFromUtf16CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
-    inline Bool toString(
-        String &        _to
-        , const Utf32 & _FROM
-    )
-    {
-        return gfStringFromUtf32(
-            &_to
-            , &_FROM
-        );
-    }
-
-    inline Bool toStringFromUnicode(
-        String &            _to
-        , const Utf32Char * _FROM
-        , Size              _length
-    )
-    {
-        return gfStringFromUtf32CharPtr(
-            &_to
-            , _FROM
-            , _length
-        );
-    }
-
     inline String * newString(
     )
     {
@@ -122,7 +50,7 @@ namespace gf {
         );
     }
 
-    inline String * newString(
+    inline String * newStringFromUnicode(
         const Utf8 &    _FROM
     )
     {
@@ -142,7 +70,7 @@ namespace gf {
         );
     }
 
-    inline String * newString(
+    inline String * newStringFromUnicode(
         const Utf16 &   _FROM
     )
     {
@@ -162,7 +90,7 @@ namespace gf {
         );
     }
 
-    inline String * newString(
+    inline String * newStringFromUnicode(
         const Utf32 &   _FROM
     )
     {
@@ -206,6 +134,102 @@ namespace gf {
     {
         return gfStringGetLength(
             &_STRING
+        );
+    }
+
+    inline Bool assign(
+        String &            _to
+        , const String &    _FROM
+    )
+    {
+        return gfStringAssign(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assign(
+        String &                _to
+        , const StringChar *    _FROM
+        , Size                  _length
+    )
+    {
+        return gfStringAssignFromCharPtr(
+            &_to
+            , _FROM
+            , _length
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        String &        _to
+        , const Utf8 &  _FROM
+    )
+    {
+        return gfStringAssignFromUtf8(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        String &            _to
+        , const Utf8Char *  _FROM
+        , Size              _length
+    )
+    {
+        return gfStringAssignFromUtf8CharPtr(
+            &_to
+            , _FROM
+            , _length
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        String &        _to
+        , const Utf16 & _FROM
+    )
+    {
+        return gfStringAssignFromUtf16(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        String &            _to
+        , const Utf16Char * _FROM
+        , Size              _length
+    )
+    {
+        return gfStringAssignFromUtf16CharPtr(
+            &_to
+            , _FROM
+            , _length
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        String &        _to
+        , const Utf32 & _FROM
+    )
+    {
+        return gfStringAssignFromUtf32(
+            &_to
+            , &_FROM
+        );
+    }
+
+    inline Bool assignFromUnicode(
+        String &            _to
+        , const Utf32Char * _FROM
+        , Size              _length
+    )
+    {
+        return gfStringAssignFromUtf32CharPtr(
+            &_to
+            , _FROM
+            , _length
         );
     }
 }
