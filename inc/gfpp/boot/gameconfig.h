@@ -1,13 +1,15 @@
 ﻿#ifndef GFPP_BOOT_GAMECONFIG_H
 #define GFPP_BOOT_GAMECONFIG_H
 
+namespace gf {
+    struct GameConfig;
+}
+
 #include "gfpp/string/utf32.h"
 #include "gfpp/common/primitives.h"
 #include "gfpp/util/import.h"
 
 namespace gf {
-    struct GameConfig;
-
     GFPPEXPORT GameConfig * newGameConfig(
     );
 
