@@ -1,29 +1,29 @@
 ﻿#ifndef GFPP_COMMON_PRIMITIVES_H
 #define GFPP_COMMON_PRIMITIVES_H
 
-#include "gf/common/primitives.h"
+#include <cstddef>
 
 namespace gf {
-    typedef GfBool Bool;
+    typedef bool Bool;
 
-    typedef GfSize Size;
+    typedef std::size_t Size;
 
-    typedef GfByte Byte;
-    typedef GfUByte UByte;
-    typedef GfShort Short;
-    typedef GfUShort UShort;
-    typedef GfInt Int;
-    typedef GfUInt UInt;
-    typedef GfLong Long;
-    typedef GfULong ULong;
+    typedef char Byte;
+    typedef unsigned char UByte;
+    typedef short Short;
+    typedef unsigned short UShort;
+    typedef int Int;
+    typedef unsigned int UInt;
+    typedef long long Long;
+    typedef unsigned long long ULong;
 
-    typedef GfFloat Float;
-    typedef GfDouble Double;
+    typedef float Float;
+    typedef double Double;
 
-    typedef GfStringChar StringChar;
-    typedef GfUtf8Char Utf8Char;
-    typedef GfUtf16Char Utf16Char;
-    typedef GfUtf32Char Utf32Char;
+    typedef char StringChar;
+    typedef char Utf8Char;
+    typedef char16_t Utf16Char;
+    typedef char32_t Utf32Char;
 }
 
 #endif  // GFPP_COMMON_PRIMITIVES_H
