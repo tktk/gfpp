@@ -1,21 +1,7 @@
 ﻿#ifndef GFPP_COMMON_FUNCTIONAL_H
 #define GFPP_COMMON_FUNCTIONAL_H
 
-#include "gf4cpp/common/primitives.h"
-
-template< typename T >
-void gfFree(
-    T &
-);
-
-template<
-    typename KEY1_T
-    , typename KEY2_T
->
-gf::Bool gfLess(
-    const KEY1_T &
-    , const KEY2_T &
-);
+#include "gfpp/common/primitives.h"
 
 namespace gf {
     template< typename T >
@@ -25,7 +11,7 @@ namespace gf {
             T   _obj
         ) const
         {
-            gfFree( *_obj );
+            free( *_obj );
         }
     };
 
@@ -40,7 +26,7 @@ namespace gf {
             , const KEY2_T &    _KEY2
         ) const
         {
-            return gfLess(
+            return less(
                 *_KEY1
                 , *_KEY2
             );

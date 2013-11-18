@@ -1,7 +1,7 @@
 ﻿#ifndef GFPP_COMMON_MEMORY_H
 #define GFPP_COMMON_MEMORY_H
 
-#include "gf4cpp/common/functional.h"
+#include "gfpp/common/functional.h"
 
 #include <memory>
 #include <type_traits>

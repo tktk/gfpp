@@ -1,159 +1,146 @@
 ﻿#ifndef GFPP_STRING_UTF32_H
 #define GFPP_STRING_UTF32_H
 
-#include "gf/string/utf32.h"
-
 namespace gf {
-    typedef GfUtf32 Utf32;
+    struct Utf32;
 }
 
-#include "gf4cpp/string/string.h"
-#include "gf4cpp/string/utf8.h"
-#include "gf4cpp/string/utf16.h"
-#include "gf4cpp/common/functional.h"
-#include "gf4cpp/common/primitives.h"
-#include "gf/util/import.h"
+#include "gfpp/string/string.h"
+#include "gfpp/string/utf8.h"
+#include "gfpp/string/utf16.h"
+#include "gfpp/common/primitives.h"
+#include "gfpp/util/import.h"
 
 namespace gf {
-    GFEXPORT Utf32 * newUtf32(
+    GFPPEXPORT Utf32 * newUtf32(
     );
 
-    GFEXPORT Utf32 * clone(
+    GFPPEXPORT Utf32 * clone(
         const Utf32 &
     );
 
-    GFEXPORT Utf32 * newUtf32(
+    GFPPEXPORT Utf32 * newUtf32(
         const Utf32Char *
     );
 
-    GFEXPORT Utf32 * newUtf32(
+    GFPPEXPORT Utf32 * newUtf32(
         const Utf32Char *
         , Size
     );
 
-    GFEXPORT Utf32 * newUtf32FromString(
+    GFPPEXPORT Utf32 * newUtf32FromString(
         const String &
     );
 
-    GFEXPORT Utf32 * newUtf32FromString(
+    GFPPEXPORT Utf32 * newUtf32FromString(
         const StringChar *
     );
 
-    GFEXPORT Utf32 * newUtf32FromString(
+    GFPPEXPORT Utf32 * newUtf32FromString(
         const StringChar *
         , Size
     );
 
-    GFEXPORT Utf32 * newUtf32FromUnicode(
+    GFPPEXPORT Utf32 * newUtf32FromUnicode(
         const Utf8 &
     );
 
-    GFEXPORT Utf32 * newUtf32FromUnicode(
+    GFPPEXPORT Utf32 * newUtf32FromUnicode(
         const Utf8Char *
     );
 
-    GFEXPORT Utf32 * newUtf32FromUnicode(
+    GFPPEXPORT Utf32 * newUtf32FromUnicode(
         const Utf8Char *
         , Size
     );
 
-    GFEXPORT Utf32 * newUtf32FromUnicode(
+    GFPPEXPORT Utf32 * newUtf32FromUnicode(
         const Utf16 &
     );
 
-    GFEXPORT Utf32 * newUtf32FromUnicode(
+    GFPPEXPORT Utf32 * newUtf32FromUnicode(
         const Utf16Char *
     );
 
-    GFEXPORT Utf32 * newUtf32FromUnicode(
+    GFPPEXPORT Utf32 * newUtf32FromUnicode(
         const Utf16Char *
         , Size
     );
 
-    GFEXPORT void free(
+    GFPPEXPORT void free(
         Utf32 &
     );
 
-    GFEXPORT const Utf32Char * getPtr(
+    GFPPEXPORT const Utf32Char * getPtr(
         const Utf32 &
     );
 
-    GFEXPORT Size getLength(
+    GFPPEXPORT Size getLength(
         const Utf32 &
     );
 
-    GFEXPORT Bool assign(
+    GFPPEXPORT Bool assign(
         Utf32 &
         , const Utf32 &
     );
 
-    GFEXPORT Bool assign(
+    GFPPEXPORT Bool assign(
         Utf32 &
         , const Utf32Char *
     );
 
-    GFEXPORT Bool assign(
+    GFPPEXPORT Bool assign(
         Utf32 &
         , const Utf32Char *
         , Size
     );
 
-    GFEXPORT Bool assignFromString(
+    GFPPEXPORT Bool assignFromString(
         Utf32 &
         , const String &
     );
 
-    GFEXPORT Bool assignFromString(
+    GFPPEXPORT Bool assignFromString(
         Utf32 &
         , const StringChar *
     );
 
-    GFEXPORT Bool assignFromString(
+    GFPPEXPORT Bool assignFromString(
         Utf32 &
         , const StringChar *
         , Size
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         Utf32 &
         , const Utf8 &
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         Utf32 &
         , const Utf8Char *
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         Utf32 &
         , const Utf8Char *
         , Size
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         Utf32 &
         , const Utf16 &
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         Utf32 &
         , const Utf16Char *
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         Utf32 &
         , const Utf16Char *
         , Size
-    );
-}
-
-template<>
-inline void gfFree(
-    gf::Utf32 & _utf32
-)
-{
-    gf::free(
-        _utf32
     );
 }
 

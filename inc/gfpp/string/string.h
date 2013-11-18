@@ -1,159 +1,146 @@
 ﻿#ifndef GFPP_STRING_STRING_H
 #define GFPP_STRING_STRING_H
 
-#include "gf/string/string.h"
-
 namespace gf {
-    typedef GfString String;
+    struct String;
 }
 
-#include "gf4cpp/string/utf8.h"
-#include "gf4cpp/string/utf16.h"
-#include "gf4cpp/string/utf32.h"
-#include "gf4cpp/common/functional.h"
-#include "gf4cpp/common/primitives.h"
-#include "gf/util/import.h"
+#include "gfpp/string/utf8.h"
+#include "gfpp/string/utf16.h"
+#include "gfpp/string/utf32.h"
+#include "gfpp/common/primitives.h"
+#include "gfpp/util/import.h"
 
 namespace gf {
-    GFEXPORT String * newString(
+    GFPPEXPORT String * newString(
     );
 
-    GFEXPORT String * clone(
+    GFPPEXPORT String * clone(
         const String &
     );
 
-    GFEXPORT String * newString(
+    GFPPEXPORT String * newString(
         const StringChar *
     );
 
-    GFEXPORT String * newString(
+    GFPPEXPORT String * newString(
         const StringChar *
         , Size
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf8 &
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf8Char *
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf8Char *
         , Size
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf16 &
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf16Char *
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf16Char *
         , Size
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf32 &
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf32Char *
     );
 
-    GFEXPORT String * newStringFromUnicode(
+    GFPPEXPORT String * newStringFromUnicode(
         const Utf32Char *
         , Size
     );
 
-    GFEXPORT void free(
+    GFPPEXPORT void free(
         String &
     );
 
-    GFEXPORT const StringChar * getPtr(
+    GFPPEXPORT const StringChar * getPtr(
         const String &
     );
 
-    GFEXPORT Size getLength(
+    GFPPEXPORT Size getLength(
         const String &
     );
 
-    GFEXPORT Bool assign(
+    GFPPEXPORT Bool assign(
         String &
         , const String &
     );
 
-    GFEXPORT Bool assign(
+    GFPPEXPORT Bool assign(
         String &
         , const StringChar *
     );
 
-    GFEXPORT Bool assign(
+    GFPPEXPORT Bool assign(
         String &
         , const StringChar *
         , Size
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf8 &
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf8Char *
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf8Char *
         , Size
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf16 &
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf16Char *
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf16Char *
         , Size
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf32 &
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf32Char *
     );
 
-    GFEXPORT Bool assignFromUnicode(
+    GFPPEXPORT Bool assignFromUnicode(
         String &
         , const Utf32Char *
         , Size
-    );
-}
-
-template<>
-inline void gfFree(
-    gf::String &    _string
-)
-{
-    gf::free(
-        _string
     );
 }
 
