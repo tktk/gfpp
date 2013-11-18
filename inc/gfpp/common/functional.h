@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_COMMON_FUNCTIONAL_H
-#define GF4CPP_COMMON_FUNCTIONAL_H
+﻿#ifndef GFPP_COMMON_FUNCTIONAL_H
+#define GFPP_COMMON_FUNCTIONAL_H
 
 #include "gf4cpp/common/primitives.h"
 
@@ -48,4 +48,4 @@ namespace gf {
     };
 }
 
-#endif  // GF4CPP_COMMON_FUNCTIONAL_H
+#endif  // GFPP_COMMON_FUNCTIONAL_H

@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_COMMON_PRIMITIVES_H
-#define GF4CPP_COMMON_PRIMITIVES_H
+﻿#ifndef GFPP_COMMON_PRIMITIVES_H
+#define GFPP_COMMON_PRIMITIVES_H
 
 #include "gf/common/primitives.h"
 
@@ -26,4 +26,4 @@ namespace gf {
     typedef GfUtf32Char Utf32Char;
 }
 
-#endif  // GF4CPP_COMMON_PRIMITIVES_H
+#endif  // GFPP_COMMON_PRIMITIVES_H

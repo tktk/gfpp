@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_STRING_STRING_H
-#define GF4CPP_STRING_STRING_H
+﻿#ifndef GFPP_STRING_STRING_H
+#define GFPP_STRING_STRING_H
 
 #include "gf/string/string.h"
 
@@ -157,4 +157,4 @@ inline void gfFree(
     );
 }
 
-#endif  // GF4CPP_STRING_STRING_H
+#endif  // GFPP_STRING_STRING_H

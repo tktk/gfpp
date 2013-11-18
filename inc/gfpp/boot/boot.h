@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_BOOT_BOOT_H
-#define GF4CPP_BOOT_BOOT_H
+﻿#ifndef GFPP_BOOT_BOOT_H
+#define GFPP_BOOT_BOOT_H
 
 #include "gf4cpp/boot/gameconfig.h"
 #include "gf4cpp/common/primitives.h"
@@ -11,4 +11,4 @@ namespace gf {
     );
 }
 
-#endif  // GF4CPP_BOOT_BOOT_H
+#endif  // GFPP_BOOT_BOOT_H

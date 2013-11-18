@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_STRING_UTF8_H
-#define GF4CPP_STRING_UTF8_H
+﻿#ifndef GFPP_STRING_UTF8_H
+#define GFPP_STRING_UTF8_H
 
 #include "gf/string/utf8.h"
 
@@ -157,4 +157,4 @@ inline void gfFree(
     );
 }
 
-#endif  // GF4CPP_STRING_UTF8_H
+#endif  // GFPP_STRING_UTF8_H

@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_BOOT_LIBRARY_H
-#define GF4CPP_BOOT_LIBRARY_H
+﻿#ifndef GFPP_BOOT_LIBRARY_H
+#define GFPP_BOOT_LIBRARY_H
 
 #include "gf/boot/library.h"
 #include "gf4cpp/string/utf32.h"
@@ -34,4 +34,4 @@ inline void gfFree(
     );
 }
 
-#endif  // GF4CPP_BOOT_LIBRARY_H
+#endif  // GFPP_BOOT_LIBRARY_H

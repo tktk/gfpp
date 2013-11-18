@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_COMMON_MEMORY_H
-#define GF4CPP_COMMON_MEMORY_H
+﻿#ifndef GFPP_COMMON_MEMORY_H
+#define GFPP_COMMON_MEMORY_H
 
 #include "gf4cpp/common/functional.h"
 
@@ -60,4 +60,4 @@ namespace gf {
     }
 }
 
-#endif  // GF4CPP_COMMON_MEMORY_H
+#endif  // GFPP_COMMON_MEMORY_H

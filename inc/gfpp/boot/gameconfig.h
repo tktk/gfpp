@@ -1,5 +1,5 @@
-﻿#ifndef GF4CPP_BOOT_GAMECONFIG_H
-#define GF4CPP_BOOT_GAMECONFIG_H
+﻿#ifndef GFPP_BOOT_GAMECONFIG_H
+#define GFPP_BOOT_GAMECONFIG_H
 
 #include "gf/boot/gameconfig.h"
 #include "gf4cpp/string/utf32.h"
@@ -55,4 +55,4 @@ inline void gfFree(
     );
 }
 
-#endif  // GF4CPP_BOOT_GAMECONFIG_H
+#endif  // GFPP_BOOT_GAMECONFIG_H
