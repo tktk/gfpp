@@ -12,6 +12,7 @@ def build( _context ):
             common.GFPP : {
                 MODULE_NAME : {
                     'boot.cpp',
+                    'gameconfig.cpp',
                 },
             },
         },
