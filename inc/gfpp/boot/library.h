@@ -5,7 +5,6 @@ namespace gf {
     struct Library;
 }
 
-#include "gfpp/boot/library.h"
 #include "gfpp/string/utf32.h"
 #include "gfpp/util/import.h"
 

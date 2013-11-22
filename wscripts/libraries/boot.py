@@ -13,6 +13,7 @@ def build( _context ):
                 MODULE_NAME : {
                     'boot.cpp',
                     'gameconfig.cpp',
+                    'library.cpp',
                 },
             },
         },
