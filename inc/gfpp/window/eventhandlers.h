@@ -63,9 +63,21 @@ namespace gf {
         , const WindowCloseEventHandler &
     );
 
+    GFPPEXPORT void callCloseEventHandler(
+        const WindowEventHandlers &
+        , Window &
+    );
+
     GFPPEXPORT void setPositionEventHandler(
         WindowEventHandlers &
         , const WindowPositionEventHandler &
+    );
+
+    GFPPEXPORT void callPositionEventHandler(
+        const WindowEventHandlers &
+        , Window &
+        , Int
+        , Int
     );
 
     GFPPEXPORT void setSizeEventHandler(
@@ -73,9 +85,25 @@ namespace gf {
         , const WindowSizeEventHandler &
     );
 
+    GFPPEXPORT void callSizeEventHandler(
+        const WindowEventHandlers &
+        , Window &
+        , Int
+        , Int
+    );
+
     GFPPEXPORT void setPaintEventHandler(
         WindowEventHandlers &
         , const WindowPaintEventHandler &
+    );
+
+    GFPPEXPORT void callPaintEventHandler(
+        const WindowEventHandlers &
+        , Window &
+        , Int
+        , Int
+        , Int
+        , Int
     );
 }
 
