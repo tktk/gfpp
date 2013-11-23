@@ -117,6 +117,8 @@ namespace gf {
         , Window &
         , ULong
         , Bool
+        , Int
+        , Int
     )
     {
     }

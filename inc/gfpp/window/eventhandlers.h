@@ -58,6 +58,8 @@ namespace gf {
             Window &
             , ULong
             , Bool
+            , Int
+            , Int
         )
     > WindowMouseButtonEventHandler;
 
@@ -155,6 +157,8 @@ namespace gf {
         , Window &
         , ULong
         , Bool
+        , Int
+        , Int
     );
 
     GFPPEXPORT void setMouseMotionEventHandler(
