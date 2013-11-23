@@ -6,6 +6,7 @@ namespace gf {
 }
 
 #include "gfpp/window/window.h"
+#include "gfpp/window/key.h"
 #include "gfpp/common/primitives.h"
 
 #include <functional>
@@ -42,6 +43,15 @@ namespace gf {
             , Int
         )
     > WindowPaintEventHandler;
+
+    typedef std::function<
+        void(
+            Window &
+            , Key
+            , const Utf32Char *
+            , Bool
+        )
+    > WindowKeyEventHandler;
 
     typedef std::function<
         void(
@@ -120,6 +130,19 @@ namespace gf {
         , Int
         , Int
         , Int
+    );
+
+    GFPPEXPORT void setKeyEventHandler(
+        WindowEventHandlers &
+        , const WindowKeyEventHandler &
+    );
+
+    GFPPEXPORT void callKeyEventHandler(
+        const WindowEventHandlers &
+        , Window &
+        , Key
+        , const Utf32Char *
+        , Bool
     );
 
     GFPPEXPORT void setMouseButtonEventHandler(
