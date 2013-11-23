@@ -42,6 +42,22 @@ namespace gf {
             , Int
         )
     > WindowPaintEventHandler;
+
+    typedef std::function<
+        void(
+            Window &
+            , ULong
+            , Bool
+        )
+    > WindowMouseButtonEventHandler;
+
+    typedef std::function<
+        void(
+            Window &
+            , Int
+            , Int
+        )
+    > WindowMouseMotionEventHandler;
 }
 
 #include "gfpp/util/import.h"
@@ -102,6 +118,30 @@ namespace gf {
         , Window &
         , Int
         , Int
+        , Int
+        , Int
+    );
+
+    GFPPEXPORT void setMouseButtonEventHandler(
+        WindowEventHandlers &
+        , const WindowMouseButtonEventHandler &
+    );
+
+    GFPPEXPORT void callMouseButtonEventHandler(
+        const WindowEventHandlers &
+        , Window &
+        , ULong
+        , Bool
+    );
+
+    GFPPEXPORT void setMouseMotionEventHandler(
+        WindowEventHandlers &
+        , const WindowMouseMotionEventHandler &
+    );
+
+    GFPPEXPORT void callMouseMotionEventHandler(
+        const WindowEventHandlers &
+        , Window &
         , Int
         , Int
     );
