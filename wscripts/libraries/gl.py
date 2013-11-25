@@ -13,6 +13,7 @@ def build( _context ):
                 MODULE_NAME : {
                     'gl.cpp',
                     'contextinfo.cpp',
+                    'context.cpp',
                 },
             },
         },
