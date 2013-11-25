@@ -3,9 +3,9 @@
 
 #ifndef GFPPEXPORT
 #   if defined OS_LINUX // OS
-#       define GFPPEXPORT
+#       define GFPPEXPORT extern
 #   elif defined OS_WINDOWS // OS
-#       define GFPPEXPORT __declspec( dllimport )
+#       define GFPPEXPORT extern __declspec( dllimport )
 #   else    // OS
 #       error 未対応のOS
 #   endif   // OS
