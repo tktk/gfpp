@@ -2,11 +2,11 @@
 
 from wscripts import common
 from wscripts import cmdoption
-from wscripts import libraries
+from wscripts import fgpp
 
 import os.path
 
-APPNAME = 'gfpp'
+APPNAME = 'fgpp'
 VERSION = '0.1.0'
 
 out = common.BUILD_DIR
@@ -265,4 +265,4 @@ def _configureFlags(
     return None
 
 def build( _context ):
-    libraries.build( _context )
+    fgpp.build( _context )

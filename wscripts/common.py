@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-GFPP = 'gfpp'
+FGPP = 'fgpp'
 
 BUILD_DIR = 'build'
 SOURCE_DIR = 'src'
