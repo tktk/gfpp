@@ -12,8 +12,8 @@ def build( _context ):
             common.FGPP : {
                 MODULE_NAME : {
                     'gl.cpp',
-                    'contextinfo.cpp',
                     'context.cpp',
+                    'config.cpp',
                 },
             },
         },

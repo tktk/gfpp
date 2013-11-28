@@ -1,335 +1,335 @@
-﻿#include "fgpp/util/export.h"
-#include "fgpp/gl/contextinfo.h"
+﻿#include "fgpp/common/primitives.h"
 
-#include "fgpp/common/primitives.h"
+#include "fgpp/util/export.h"
+#include "fgpp/gl/config.h"
 
 namespace fg {
-    GLContextInfo * newGLContextInfo(
+    GLConfig * newGLConfig(
     )
     {
         return nullptr;
     }
 
-    GLContextInfo * clone(
-        const GLContextInfo &
+    GLConfig * clone(
+        const GLConfig &
     )
     {
         return nullptr;
     }
 
     void free(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool getDoubleBuffer(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     void setDoubleBuffer(
-        GLContextInfo &
+        GLConfig &
         , Bool
     )
     {
     }
 
     Bool existsAuxBuffers(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getAuxBuffers(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setAuxBuffers(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearAuxBuffers(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsRedBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getRedBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setRedBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearRedBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setGreenBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearGreenBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setBlueBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearBlueBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setAlphaBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearAlphaBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsDepthBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getDepthBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setDepthBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearDepthBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsStencilBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getStencilBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setStencilBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearStencilBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsAccumRedBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getAccumRedBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setAccumRedBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearAccumRedBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsAccumGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getAccumGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setAccumGreenBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearAccumGreenBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsAccumBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getAccumBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setAccumBlueBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearAccumBlueBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }
 
     Bool existsAccumAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return false;
     }
 
     Int getAccumAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     )
     {
         return 0;
     }
 
     void setAccumAlphaBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     )
     {
     }
 
     void clearAccumAlphaBits(
-        GLContextInfo &
+        GLConfig &
     )
     {
     }

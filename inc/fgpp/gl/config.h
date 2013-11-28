@@ -1,220 +1,220 @@
-﻿#ifndef FGPP_GL_CONTEXTINFO_H
-#define FGPP_GL_CONTEXTINFO_H
+﻿#ifndef FGPP_GL_CONFIG_H
+#define FGPP_GL_CONFIG_H
 
 namespace fg {
-    struct GLContextInfo;
+    struct GLConfig;
 }
 
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
-    FGPPEXPORT GLContextInfo * newGLContextInfo(
+    FGPPEXPORT GLConfig * newGLConfig(
     );
 
-    FGPPEXPORT GLContextInfo * clone(
-        const GLContextInfo &
+    FGPPEXPORT GLConfig * clone(
+        const GLConfig &
     );
 
     FGPPEXPORT void free(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool getDoubleBuffer(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setDoubleBuffer(
-        GLContextInfo &
+        GLConfig &
         , Bool
     );
 
     FGPPEXPORT Bool existsAuxBuffers(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getAuxBuffers(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setAuxBuffers(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearAuxBuffers(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsRedBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getRedBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setRedBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearRedBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setGreenBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearGreenBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setBlueBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearBlueBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setAlphaBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearAlphaBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsDepthBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getDepthBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setDepthBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearDepthBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsStencilBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getStencilBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setStencilBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearStencilBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsAccumRedBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getAccumRedBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setAccumRedBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearAccumRedBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsAccumGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getAccumGreenBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setAccumGreenBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearAccumGreenBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsAccumBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getAccumBlueBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setAccumBlueBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearAccumBlueBits(
-        GLContextInfo &
+        GLConfig &
     );
 
     FGPPEXPORT Bool existsAccumAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT Int getAccumAlphaBits(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void setAccumAlphaBits(
-        GLContextInfo &
+        GLConfig &
         , Int
     );
 
     FGPPEXPORT void clearAccumAlphaBits(
-        GLContextInfo &
+        GLConfig &
     );
 }
 
-#endif  // FGPP_GL_CONTEXTINFO_H
+#endif  // FGPP_GL_CONFIG_H

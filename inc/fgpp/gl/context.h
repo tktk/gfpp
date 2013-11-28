@@ -5,14 +5,14 @@ namespace fg {
     struct GLContext;
 }
 
-#include "fgpp/gl/contextinfo.h"
+#include "fgpp/gl/config.h"
 #include "fgpp/window/window.h"
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
     FGPPEXPORT GLContext * newGLContext(
-        const GLContextInfo &
+        const GLConfig &
     );
 
     FGPPEXPORT void free(
