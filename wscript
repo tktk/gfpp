@@ -3,6 +3,7 @@
 from wscripts import common
 from wscripts import cmdoption
 from wscripts import fgpp
+from wscripts import gfpp
 
 import os.path
 
@@ -266,3 +267,4 @@ def _configureFlags(
 
 def build( _context ):
     fgpp.build( _context )
+    gfpp.build( _context )

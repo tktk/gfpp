@@ -1,6 +1,8 @@
 ﻿#ifndef FGPP_UTIL_EXPORT_H
 #define FGPP_UTIL_EXPORT_H
 
+#undef  FGPPEXPORT
+
 #if defined OS_LINUX    // OS
 #   define FGPPEXPORT extern __attribute__( ( visibility( "default" ) ) )
 #elif defined OS_WINDOWS    // OS

@@ -1,40 +1,14 @@
-﻿#include "fgpp/common/primitives.h"
-
-#include "fgpp/util/export.h"
+﻿#include "fgpp/util/export.h"
 #include "fgpp/gl/config.h"
 
+#include "fgpp/common/primitives.h"
+
 namespace fg {
-    GLConfig * newGLConfig(
-    )
-    {
-        return nullptr;
-    }
-
-    GLConfig * clone(
-        const GLConfig &
-    )
-    {
-        return nullptr;
-    }
-
-    void free(
-        GLConfig &
-    )
-    {
-    }
-
     Bool getDoubleBuffer(
         const GLConfig &
     )
     {
         return false;
-    }
-
-    void setDoubleBuffer(
-        GLConfig &
-        , Bool
-    )
-    {
     }
 
     Bool existsAuxBuffers(
@@ -51,19 +25,6 @@ namespace fg {
         return 0;
     }
 
-    void setAuxBuffers(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearAuxBuffers(
-        GLConfig &
-    )
-    {
-    }
-
     Bool existsRedBits(
         const GLConfig &
     )
@@ -76,19 +37,6 @@ namespace fg {
     )
     {
         return 0;
-    }
-
-    void setRedBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearRedBits(
-        GLConfig &
-    )
-    {
     }
 
     Bool existsGreenBits(
@@ -105,19 +53,6 @@ namespace fg {
         return 0;
     }
 
-    void setGreenBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearGreenBits(
-        GLConfig &
-    )
-    {
-    }
-
     Bool existsBlueBits(
         const GLConfig &
     )
@@ -130,19 +65,6 @@ namespace fg {
     )
     {
         return 0;
-    }
-
-    void setBlueBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearBlueBits(
-        GLConfig &
-    )
-    {
     }
 
     Bool existsAlphaBits(
@@ -159,19 +81,6 @@ namespace fg {
         return 0;
     }
 
-    void setAlphaBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearAlphaBits(
-        GLConfig &
-    )
-    {
-    }
-
     Bool existsDepthBits(
         const GLConfig &
     )
@@ -184,19 +93,6 @@ namespace fg {
     )
     {
         return 0;
-    }
-
-    void setDepthBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearDepthBits(
-        GLConfig &
-    )
-    {
     }
 
     Bool existsStencilBits(
@@ -213,19 +109,6 @@ namespace fg {
         return 0;
     }
 
-    void setStencilBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearStencilBits(
-        GLConfig &
-    )
-    {
-    }
-
     Bool existsAccumRedBits(
         const GLConfig &
     )
@@ -238,19 +121,6 @@ namespace fg {
     )
     {
         return 0;
-    }
-
-    void setAccumRedBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearAccumRedBits(
-        GLConfig &
-    )
-    {
     }
 
     Bool existsAccumGreenBits(
@@ -267,19 +137,6 @@ namespace fg {
         return 0;
     }
 
-    void setAccumGreenBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearAccumGreenBits(
-        GLConfig &
-    )
-    {
-    }
-
     Bool existsAccumBlueBits(
         const GLConfig &
     )
@@ -294,19 +151,6 @@ namespace fg {
         return 0;
     }
 
-    void setAccumBlueBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearAccumBlueBits(
-        GLConfig &
-    )
-    {
-    }
-
     Bool existsAccumAlphaBits(
         const GLConfig &
     )
@@ -319,18 +163,5 @@ namespace fg {
     )
     {
         return 0;
-    }
-
-    void setAccumAlphaBits(
-        GLConfig &
-        , Int
-    )
-    {
-    }
-
-    void clearAccumAlphaBits(
-        GLConfig &
-    )
-    {
     }
 }
