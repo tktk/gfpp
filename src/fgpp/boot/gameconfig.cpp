@@ -31,34 +31,4 @@ namespace fg {
     {
         return false;
     }
-
-    const Utf32 * getMainFile(
-        const GameConfig &
-    )
-    {
-        return nullptr;
-    }
-
-    Bool setMainFile(
-        GameConfig &
-        , const Utf32 &
-    )
-    {
-        return false;
-    }
-
-    const Utf32 * getMain(
-        const GameConfig &
-    )
-    {
-        return nullptr;
-    }
-
-    Bool setMain(
-        GameConfig &
-        , const Utf32 &
-    )
-    {
-        return false;
-    }
 }

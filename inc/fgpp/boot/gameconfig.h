@@ -25,24 +25,6 @@ namespace fg {
         GameConfig &
         , const Utf32 &
     );
-
-    FGPPEXPORT const Utf32 * getMainFile(
-        const GameConfig &
-    );
-
-    FGPPEXPORT Bool setMainFile(
-        GameConfig &
-        , const Utf32 &
-    );
-
-    FGPPEXPORT const Utf32 * getMain(
-        const GameConfig &
-    );
-
-    FGPPEXPORT Bool setMain(
-        GameConfig &
-        , const Utf32 &
-    );
 }
 
 #endif  // FGPP_BOOT_GAMECONFIG_H
