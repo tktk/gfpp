@@ -2,12 +2,12 @@
 #define GFPP_MAIN_ARGS_H
 
 #include "fgpp/main/args.h"
-#include "fgpp/boot/config.h"
+#include "gfpp/boot/config.h"
 #include "fgpp/util/import.h"
 
 namespace gf {
     FGPPEXPORT fg::Args * newArgs(
-        const fg::BootConfig &
+        const BootConfig &
     );
 
     FGPPEXPORT void free(

@@ -1,11 +1,11 @@
 ﻿#include "fgpp/util/export.h"
 #include "gfpp/main/args.h"
 
-#include "fgpp/boot/config.h"
+#include "gfpp/boot/config.h"
 
 namespace gf {
     fg::Args * newArgs(
-        const fg::BootConfig &
+        const BootConfig &
     )
     {
         return nullptr;

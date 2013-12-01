@@ -1,17 +1,17 @@
-﻿#ifndef FGPP_BOOT_LIBRARY_H
-#define FGPP_BOOT_LIBRARY_H
+﻿#ifndef GFPP_BOOT_LIBRARY_H
+#define GFPP_BOOT_LIBRARY_H
 
-namespace fg {
+namespace gf {
     struct Library;
 }
 
 #include "fgpp/string/utf32.h"
 #include "fgpp/util/import.h"
 
-namespace fg {
+namespace gf {
     FGPPEXPORT Library * newLibrary(
-        const Utf32 &
-        , const Utf32 &
+        const fg::Utf32 &
+        , const fg::Utf32 &
     );
 
     FGPPEXPORT void free(
@@ -20,8 +20,8 @@ namespace fg {
 
     FGPPEXPORT void * getAddress(
         Library &
-        , const Utf32 &
+        , const fg::Utf32 &
     );
 }
 
-#endif  // FGPP_BOOT_LIBRARY_H
+#endif  // GFPP_BOOT_LIBRARY_H

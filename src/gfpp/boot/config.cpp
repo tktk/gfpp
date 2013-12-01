@@ -1,10 +1,10 @@
 ﻿#include "fgpp/util/export.h"
-#include "fgpp/boot/config.h"
+#include "gfpp/boot/config.h"
 
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"
 
-namespace fg {
+namespace gf {
     BootConfig * newBootConfig(
     )
     {
@@ -17,16 +17,16 @@ namespace fg {
     {
     }
 
-    const Utf32 * getBinDir(
+    const fg::Utf32 * getBinDir(
         const BootConfig &
     )
     {
         return nullptr;
     }
 
-    Bool setBinDir(
+    fg::Bool setBinDir(
         BootConfig &
-        , const Utf32 &
+        , const fg::Utf32 &
     )
     {
         return false;

@@ -1,12 +1,12 @@
 ﻿#include "fgpp/util/export.h"
-#include "fgpp/boot/library.h"
+#include "gfpp/boot/library.h"
 
 #include "fgpp/string/utf32.h"
 
-namespace fg {
+namespace gf {
     Library * newLibrary(
-        const Utf32 &
-        , const Utf32 &
+        const fg::Utf32 &
+        , const fg::Utf32 &
     )
     {
         return nullptr;
@@ -20,7 +20,7 @@ namespace fg {
 
     void * getAddress(
         Library &
-        , const Utf32 &
+        , const fg::Utf32 &
     )
     {
         return nullptr;

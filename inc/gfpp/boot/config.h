@@ -1,7 +1,7 @@
-﻿#ifndef FGPP_BOOT_CONFIG_H
-#define FGPP_BOOT_CONFIG_H
+﻿#ifndef GFPP_BOOT_CONFIG_H
+#define GFPP_BOOT_CONFIG_H
 
-namespace fg {
+namespace gf {
     struct BootConfig;
 }
 
@@ -9,7 +9,7 @@ namespace fg {
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
-namespace fg {
+namespace gf {
     FGPPEXPORT BootConfig * newBootConfig(
     );
 
@@ -17,14 +17,14 @@ namespace fg {
         BootConfig &
     );
 
-    FGPPEXPORT const Utf32 * getBinDir(
+    FGPPEXPORT const fg::Utf32 * getBinDir(
         const BootConfig &
     );
 
-    FGPPEXPORT Bool setBinDir(
+    FGPPEXPORT fg::Bool setBinDir(
         BootConfig &
-        , const Utf32 &
+        , const fg::Utf32 &
     );
 }
 
-#endif  // FGPP_BOOT_CONFIG_H
+#endif  // GFPP_BOOT_CONFIG_H
