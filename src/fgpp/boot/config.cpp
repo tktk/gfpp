@@ -1,31 +1,31 @@
 ﻿#include "fgpp/util/export.h"
-#include "fgpp/boot/gameconfig.h"
+#include "fgpp/boot/config.h"
 
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"
 
 namespace fg {
-    GameConfig * newGameConfig(
+    BootConfig * newBootConfig(
     )
     {
         return nullptr;
     }
 
     void free(
-        GameConfig &
+        BootConfig &
     )
     {
     }
 
     const Utf32 * getBinDir(
-        const GameConfig &
+        const BootConfig &
     )
     {
         return nullptr;
     }
 
     Bool setBinDir(
-        GameConfig &
+        BootConfig &
         , const Utf32 &
     )
     {

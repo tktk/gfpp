@@ -1,8 +1,8 @@
-﻿#ifndef FGPP_BOOT_GAMECONFIG_H
-#define FGPP_BOOT_GAMECONFIG_H
+﻿#ifndef FGPP_BOOT_CONFIG_H
+#define FGPP_BOOT_CONFIG_H
 
 namespace fg {
-    struct GameConfig;
+    struct BootConfig;
 }
 
 #include "fgpp/string/utf32.h"
@@ -10,21 +10,21 @@ namespace fg {
 #include "fgpp/util/import.h"
 
 namespace fg {
-    FGPPEXPORT GameConfig * newGameConfig(
+    FGPPEXPORT BootConfig * newBootConfig(
     );
 
     FGPPEXPORT void free(
-        GameConfig &
+        BootConfig &
     );
 
     FGPPEXPORT const Utf32 * getBinDir(
-        const GameConfig &
+        const BootConfig &
     );
 
     FGPPEXPORT Bool setBinDir(
-        GameConfig &
+        BootConfig &
         , const Utf32 &
     );
 }
 
-#endif  // FGPP_BOOT_GAMECONFIG_H
+#endif  // FGPP_BOOT_CONFIG_H
