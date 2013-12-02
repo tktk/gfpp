@@ -147,6 +147,55 @@ namespace fg {
         Int &
         , const Utf16 &
     );
+
+    FGPPEXPORT Bool toInt(
+        Int &
+        , const Utf16 &
+        , Int
+    );
+
+    FGPPEXPORT Bool toUInt(
+        UInt &
+        , const Utf16 &
+    );
+
+    FGPPEXPORT Bool toUInt(
+        UInt &
+        , const Utf16 &
+        , Int
+    );
+
+    FGPPEXPORT Bool toLong(
+        Long &
+        , const Utf16 &
+    );
+
+    FGPPEXPORT Bool toLong(
+        Long &
+        , const Utf16 &
+        , Int
+    );
+
+    FGPPEXPORT Bool toULong(
+        ULong &
+        , const Utf16 &
+    );
+
+    FGPPEXPORT Bool toULong(
+        ULong &
+        , const Utf16 &
+        , Int
+    );
+
+    FGPPEXPORT Bool toFloat(
+        Float &
+        , const Utf16 &
+    );
+
+    FGPPEXPORT Bool toDouble(
+        Double &
+        , const Utf16 &
+    );
 }
 
 #endif  // FGPP_STRING_UTF16_H

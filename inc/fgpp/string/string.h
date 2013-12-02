@@ -147,6 +147,55 @@ namespace fg {
         Int &
         , const String &
     );
+
+    FGPPEXPORT Bool toInt(
+        Int &
+        , const String &
+        , Int
+    );
+
+    FGPPEXPORT Bool toUInt(
+        UInt &
+        , const String &
+    );
+
+    FGPPEXPORT Bool toUInt(
+        UInt &
+        , const String &
+        , Int
+    );
+
+    FGPPEXPORT Bool toLong(
+        Long &
+        , const String &
+    );
+
+    FGPPEXPORT Bool toLong(
+        Long &
+        , const String &
+        , Int
+    );
+
+    FGPPEXPORT Bool toULong(
+        ULong &
+        , const String &
+    );
+
+    FGPPEXPORT Bool toULong(
+        ULong &
+        , const String &
+        , Int
+    );
+
+    FGPPEXPORT Bool toFloat(
+        Float &
+        , const String &
+    );
+
+    FGPPEXPORT Bool toDouble(
+        Double &
+        , const String &
+    );
 }
 
 #endif  // FGPP_STRING_STRING_H
