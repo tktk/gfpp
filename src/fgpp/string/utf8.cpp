@@ -220,4 +220,12 @@ namespace fg {
     {
         return false;
     }
+
+    Bool toInt(
+        Int &
+        , const Utf8 &
+    )
+    {
+        return false;
+    }
 }
