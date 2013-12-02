@@ -142,6 +142,11 @@ namespace fg {
         , const Utf32Char *
         , Size
     );
+
+    FGPPEXPORT Bool toInt(
+        Int &
+        , const String &
+    );
 }
 
 #endif  // FGPP_STRING_STRING_H

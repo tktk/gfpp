@@ -142,6 +142,11 @@ namespace fg {
         , const Utf16Char *
         , Size
     );
+
+    FGPPEXPORT Bool toInt(
+        Int &
+        , const Utf32 &
+    );
 }
 
 #endif  // FGPP_STRING_UTF32_H
