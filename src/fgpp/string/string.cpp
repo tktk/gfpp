@@ -228,4 +228,80 @@ namespace fg {
     {
         return false;
     }
+
+    Bool toInt(
+        Int &
+        , const String &
+        , Int
+    )
+    {
+        return false;
+    }
+
+    Bool toUInt(
+        UInt &
+        , const String &
+    )
+    {
+        return false;
+    }
+
+    Bool toUInt(
+        UInt &
+        , const String &
+        , Int
+    )
+    {
+        return false;
+    }
+
+    Bool toLong(
+        Long &
+        , const String &
+    )
+    {
+        return false;
+    }
+
+    Bool toLong(
+        Long &
+        , const String &
+        , Int
+    )
+    {
+        return false;
+    }
+
+    Bool toULong(
+        ULong &
+        , const String &
+    )
+    {
+        return false;
+    }
+
+    Bool toULong(
+        ULong &
+        , const String &
+        , Int
+    )
+    {
+        return false;
+    }
+
+    Bool toFloat(
+        Float &
+        , const String &
+    )
+    {
+        return false;
+    }
+
+    Bool toDouble(
+        Double &
+        , const String &
+    )
+    {
+        return false;
+    }
 }
