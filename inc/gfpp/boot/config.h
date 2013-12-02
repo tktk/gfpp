@@ -17,13 +17,21 @@ namespace gf {
         BootConfig &
     );
 
-    FGPPEXPORT const fg::Utf32 * getBinDir(
+    FGPPEXPORT fg::Bool existsBinDir(
+        const BootConfig &
+    );
+
+    FGPPEXPORT const fg::Utf32 & getBinDir(
         const BootConfig &
     );
 
     FGPPEXPORT fg::Bool setBinDir(
         BootConfig &
         , const fg::Utf32 &
+    );
+
+    FGPPEXPORT void clearBinDir(
+        BootConfig &
     );
 }
 
