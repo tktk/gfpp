@@ -2,7 +2,7 @@
 #define GFPP_MAIN_ARGS_H
 
 #include "fgpp/main/args.h"
-#include "gfpp/boot/config.h"
+#include "gfpp/main/bootconfig.h"
 #include "fgpp/util/import.h"
 
 namespace gf {

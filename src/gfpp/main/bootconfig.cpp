@@ -1,5 +1,5 @@
 ﻿#include "fgpp/util/export.h"
-#include "gfpp/boot/config.h"
+#include "gfpp/main/bootconfig.h"
 
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"

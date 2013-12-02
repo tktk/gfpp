@@ -1,5 +1,5 @@
-﻿#ifndef GFPP_BOOT_LIBRARY_H
-#define GFPP_BOOT_LIBRARY_H
+﻿#ifndef GFPP_MAIN_LIBRARY_H
+#define GFPP_MAIN_LIBRARY_H
 
 namespace gf {
     struct Library;
@@ -24,4 +24,4 @@ namespace gf {
     );
 }
 
-#endif  // GFPP_BOOT_LIBRARY_H
+#endif  // GFPP_MAIN_LIBRARY_H

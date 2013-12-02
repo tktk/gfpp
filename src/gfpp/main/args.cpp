@@ -1,7 +1,7 @@
 ﻿#include "fgpp/util/export.h"
 #include "gfpp/main/args.h"
 
-#include "gfpp/boot/config.h"
+#include "gfpp/main/bootconfig.h"
 
 namespace gf {
     fg::Args * newArgs(

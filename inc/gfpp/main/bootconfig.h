@@ -1,5 +1,5 @@
-﻿#ifndef GFPP_BOOT_CONFIG_H
-#define GFPP_BOOT_CONFIG_H
+﻿#ifndef GFPP_MAIN_BOOTCONFIG_H
+#define GFPP_MAIN_BOOTCONFIG_H
 
 namespace gf {
     struct BootConfig;
@@ -239,4 +239,4 @@ namespace gf {
     );
 }
 
-#endif  // GFPP_BOOT_CONFIG_H
+#endif  // GFPP_MAIN_BOOTCONFIG_H

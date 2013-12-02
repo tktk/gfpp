@@ -1,7 +1,7 @@
-﻿#ifndef GFPP_BOOT_BOOT_H
-#define GFPP_BOOT_BOOT_H
+﻿#ifndef GFPP_MAIN_BOOT_H
+#define GFPP_MAIN_BOOT_H
 
-#include "gfpp/boot/config.h"
+#include "gfpp/main/bootconfig.h"
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
@@ -14,4 +14,4 @@ namespace gf {
     );
 }
 
-#endif  // GFPP_BOOT_BOOT_H
+#endif  // GFPP_MAIN_BOOT_H
