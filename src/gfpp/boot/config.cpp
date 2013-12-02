@@ -4,6 +4,20 @@
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"
 
+namespace fg {
+    struct Utf32
+    {
+        Utf32(
+        )
+        {
+        }
+    };
+}
+
+namespace {
+    const fg::Utf32 UTF32;
+}
+
 namespace gf {
     BootConfig * newBootConfig(
     )
@@ -17,11 +31,18 @@ namespace gf {
     {
     }
 
-    const fg::Utf32 * getBinDir(
+    fg::Bool existsBinDir(
         const BootConfig &
     )
     {
-        return nullptr;
+        return false;
+    }
+
+    const fg::Utf32 & getBinDir(
+        const BootConfig &
+    )
+    {
+        return UTF32;
     }
 
     fg::Bool setBinDir(
@@ -30,5 +51,11 @@ namespace gf {
     )
     {
         return false;
+    }
+
+    void clearBinDir(
+        BootConfig &
+    )
+    {
     }
 }
