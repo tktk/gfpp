@@ -2,6 +2,7 @@
 #define GFPP_GL_CONFIG_H
 
 #include "fgpp/gl/config.h"
+#include "fgpp/gl/version.h"
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
@@ -11,6 +12,11 @@ namespace gf {
 
     FGPPEXPORT void free(
         fg::GLConfig &
+    );
+
+    FGPPEXPORT void setVersion(
+        fg::GLConfig &
+        , fg::GLVersion
     );
 
     FGPPEXPORT void setDoubleBuffer(
