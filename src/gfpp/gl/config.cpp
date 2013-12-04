@@ -2,6 +2,7 @@
 #include "gfpp/gl/config.h"
 
 #include "fgpp/gl/config.h"
+#include "fgpp/gl/version.h"
 #include "fgpp/common/primitives.h"
 
 namespace gf {
@@ -13,6 +14,13 @@ namespace gf {
 
     void free(
         fg::GLConfig &
+    )
+    {
+    }
+
+    void setVersion(
+        fg::GLConfig &
+        , fg::GLVersion
     )
     {
     }
