@@ -1,6 +1,7 @@
 ﻿#include "fgpp/util/export.h"
 #include "gfpp/main/bootconfig.h"
 
+#include "fgpp/gl/version.h"
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"
 
@@ -54,6 +55,33 @@ namespace gf {
     }
 
     void clearBinDir(
+        BootConfig &
+    )
+    {
+    }
+
+    fg::Bool existsGLVersion(
+        const BootConfig &
+    )
+    {
+        return false;
+    }
+
+    fg::GLVersion getGLVersion(
+        const BootConfig &
+    )
+    {
+        return fg::GLVersion::GL_VERSION_INVALID;
+    }
+
+    void setGLVersion(
+        BootConfig &
+        , fg::GLVersion
+    )
+    {
+    }
+
+    void clearGLVersion(
         BootConfig &
     )
     {
