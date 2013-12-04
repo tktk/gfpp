@@ -1,9 +1,17 @@
 ﻿#include "fgpp/util/export.h"
 #include "fgpp/gl/config.h"
 
+#include "fgpp/gl/version.h"
 #include "fgpp/common/primitives.h"
 
 namespace fg {
+    GLVersion getVersion(
+        const GLConfig &
+    )
+    {
+        return GLVersion::GL_VERSION_INVALID;
+    }
+
     Bool getDoubleBuffer(
         const GLConfig &
     )

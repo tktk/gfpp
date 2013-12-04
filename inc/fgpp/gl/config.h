@@ -5,10 +5,15 @@ namespace fg {
     struct GLConfig;
 }
 
+#include "fgpp/gl/version.h"
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
+    FGPPEXPORT GLVersion getVersion(
+        const GLConfig &
+    );
+
     FGPPEXPORT Bool getDoubleBuffer(
         const GLConfig &
     );
