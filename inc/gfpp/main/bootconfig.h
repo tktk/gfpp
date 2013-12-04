@@ -5,6 +5,7 @@ namespace gf {
     struct BootConfig;
 }
 
+#include "fgpp/gl/version.h"
 #include "fgpp/string/utf32.h"
 #include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
@@ -31,6 +32,23 @@ namespace gf {
     );
 
     FGPPEXPORT void clearBinDir(
+        BootConfig &
+    );
+
+    FGPPEXPORT fg::Bool existsGLVersion(
+        const BootConfig &
+    );
+
+    FGPPEXPORT fg::GLVersion getGLVersion(
+        const BootConfig &
+    );
+
+    FGPPEXPORT void setGLVersion(
+        BootConfig &
+        , fg::GLVersion
+    );
+
+    FGPPEXPORT void clearGLVersion(
         BootConfig &
     );
 
