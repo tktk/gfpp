@@ -39,8 +39,34 @@ namespace fg {
     typedef std::uint64_t GLuint64;
     typedef std::int64_t GLint64;
 
+    // GL_VERSION_4_3
+    typedef void ( * GLDebugProc )(
+        GLenum
+        , GLenum
+        , GLuint
+        , GLenum
+        , GLsizei
+        , const GLchar *
+        , const void *
+    );
+
     // GL_ARB_bindless_texture
     typedef std::uint64_t GLuint64EXT;
+
+    // GL_ARB_cl_event
+    typedef struct __GLclcontext *GLclcontext;
+    typedef struct __GLclevent *GLclevent;
+
+    // GL_ARB_debug_output
+    typedef void ( * GLDebugProcARB )(
+        GLenum
+        , GLenum
+        , GLuint
+        , GLenum
+        , GLsizei
+        , const GLchar *
+        , const void *
+    );
 
     // GL_ARB_half_float_pixel
     typedef unsigned short GLhalfARB;
@@ -55,6 +81,16 @@ namespace fg {
 
     // GL_OES_fixed_point
     typedef GLint GLfixed;
+
+    // GL_AMD_debug_output
+    typedef void ( * GLDebugProcAMD )(
+        GLuint
+        , GLenum
+        , GLenum
+        , GLsizei
+        , const GLchar *
+        , void *
+    );
 
     // GL_NV_gpu_shader5
     typedef std::int64_t GLint64EXT;
