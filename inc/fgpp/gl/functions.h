@@ -3625,19 +3625,22 @@ namespace fg {
     );
 }
 
-#define GL_DECLARE_FUNCTION( _dummyReturnValue, _returnType, _name, _args, _argValues ) \
+#define GL_DECLARE_FUNCTION( _returnType, _name, _args ) \
     FGPPEXPORT _returnType gl##_name _args; \
 
-#define FGPP_GL_VOID_FUNCTION( _name, _args, _argValues ) \
-    FGPP_GL_FUNCTION( , void, _name, _args, _argValues )
+#define FGPP_GL_FUNCTION( _dummyReturnValue, _returnType, _name, _args, _argValues ) \
+    GL_DECLARE_FUNCTION( _returnType, _name, _args )
 
-#define FGPP_GL_FUNCTION GL_DECLARE_FUNCTION
+#define FGPP_GL_VOID_FUNCTION( _name, _args, _argValues ) \
+    GL_DECLARE_FUNCTION( void, _name, _args )
+
 namespace fg {
     FGPP_GL_FUNCTIONS
 }
-#undef  FGPP_GL_FUNCTION
 
 #undef  FGPP_GL_VOID_FUNCTION
+
+#undef  FGPP_GL_FUNCTION
 
 #undef  GL_DECLARE_FUNCTION
 
