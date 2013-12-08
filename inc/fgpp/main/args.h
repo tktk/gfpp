@@ -9,7 +9,7 @@ namespace fg {
 #include "fgpp/util/import.h"
 
 namespace fg {
-    FGPPEXPORT const GLConfig & getGLConfig(
+    FGPPEXPORT const GLConfig * getGLConfig(
         const Args &
     );
 }

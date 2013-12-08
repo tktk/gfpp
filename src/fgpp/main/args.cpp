@@ -4,24 +4,10 @@
 #include "fgpp/gl/config.h"
 
 namespace fg {
-    struct GLConfig
-    {
-        GLConfig(
-        )
-        {
-        }
-    };
-}
-
-namespace {
-    const fg::GLConfig  CONFIG;
-}
-
-namespace fg {
-    const GLConfig & getGLConfig(
+    const GLConfig * getGLConfig(
         const Args &
     )
     {
-        return CONFIG;
+        return nullptr;
     }
 }
