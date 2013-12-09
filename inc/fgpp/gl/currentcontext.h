@@ -25,8 +25,9 @@ namespace fg {
     );
 }
 
+#define FGPP_GL_FUNCTION_NAME( _name ) gl##_name
 #define FGPP_GL_FUNCTION( _name, _returnType, ... ) \
-    _returnType gl##_name( GLCurrentContext & __VA_ARGS__ )
+    _returnType FGPP_GL_FUNCTION_NAME( _name )( GLCurrentContext & __VA_ARGS__ )
 
 #define GL_DECLARE_FUNCTION( _name, _returnType, ... ) \
     FGPPEXPORT FGPP_GL_FUNCTION( _name, _returnType, __VA_ARGS__ );
