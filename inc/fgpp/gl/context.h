@@ -6,8 +6,6 @@ namespace fg {
 }
 
 #include "fgpp/gl/config.h"
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -17,14 +15,6 @@ namespace fg {
 
     FGPPEXPORT void free(
         GLContext &
-    );
-
-    FGPPEXPORT Bool glMakeCurrent(
-        GLContext &
-        , Window &
-    );
-
-    FGPPEXPORT void glMakeCurrent(
     );
 }
 
