@@ -8,21 +8,16 @@ namespace fg {
 #include "fgpp/gl/context.h"
 #include "fgpp/gl/functions.h"
 #include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
     FGPPEXPORT GLCurrentContext * getOrNewGLCurrentContext(
+        GLContext &
+        , Window &
     );
 
     FGPPEXPORT void free(
         GLCurrentContext &
-    );
-
-    FGPPEXPORT Bool change(
-        GLCurrentContext &
-        , GLContext &
-        , Window &
     );
 
     FGPPEXPORT void swapBuffers(

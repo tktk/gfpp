@@ -8,6 +8,8 @@
 
 namespace fg {
     GLCurrentContext * getOrNewGLCurrentContext(
+        GLContext &
+        , Window &
     )
     {
         return nullptr;
@@ -17,15 +19,6 @@ namespace fg {
         GLCurrentContext &
     )
     {
-    }
-
-    Bool change(
-        GLCurrentContext &
-        , GLContext &
-        , Window &
-    )
-    {
-        return false;
     }
 
     void swapBuffers(
