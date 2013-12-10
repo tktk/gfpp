@@ -4,6 +4,6 @@
 #include "fgpp/gl/types.h"
 #include "fgpp/gl/constants.h"
 #include "fgpp/gl/context.h"
-#include "fgpp/gl/functions.h"
+#include "fgpp/gl/current.h"
 
 #endif  // FGPP_GL_GL_H

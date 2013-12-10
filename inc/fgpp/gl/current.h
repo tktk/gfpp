@@ -1,8 +1,8 @@
-﻿#ifndef FGPP_GL_CURRENTCONTEXT_H
-#define FGPP_GL_CURRENTCONTEXT_H
+﻿#ifndef FGPP_GL_CURRENT_H
+#define FGPP_GL_CURRENT_H
 
 namespace fg {
-    struct GLCurrentContext;
+    struct GLCurrent;
 }
 
 #include "fgpp/gl/context.h"
@@ -11,23 +11,23 @@ namespace fg {
 #include "fgpp/util/import.h"
 
 namespace fg {
-    FGPPEXPORT GLCurrentContext * getOrNewGLCurrentContext(
+    FGPPEXPORT GLCurrent * getOrNewGLCurrent(
         GLContext &
         , Window &
     );
 
     FGPPEXPORT void free(
-        GLCurrentContext &
+        GLCurrent &
     );
 
     FGPPEXPORT void swapBuffers(
-        GLCurrentContext &
+        GLCurrent &
     );
 }
 
 #define FGPP_GL_FUNCTION_NAME( _name ) gl##_name
 #define FGPP_GL_FUNCTION( _name, _returnType, ... ) \
-    _returnType FGPP_GL_FUNCTION_NAME( _name )( GLCurrentContext & __VA_ARGS__ )
+    _returnType FGPP_GL_FUNCTION_NAME( _name )( GLCurrent & __VA_ARGS__ )
 
 #define GL_DECLARE_FUNCTION( _name, _returnType, ... ) \
     FGPPEXPORT FGPP_GL_FUNCTION( _name, _returnType, __VA_ARGS__ );
@@ -45,4 +45,4 @@ namespace fg {
 #undef  FGPP_GL_FUNCTION_NUM
 #undef  GL_DECLARE_FUNCTION
 
-#endif  // FGPP_GL_CURRENTCONTEXT_H
+#endif  // FGPP_GL_CURRENT_H

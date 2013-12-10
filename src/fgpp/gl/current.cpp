@@ -1,5 +1,5 @@
 ﻿#include "fgpp/util/export.h"
-#include "fgpp/gl/currentcontext.h"
+#include "fgpp/gl/current.h"
 
 #include "fgpp/gl/context.h"
 #include "fgpp/gl/functions.h"
@@ -7,7 +7,7 @@
 #include "fgpp/common/primitives.h"
 
 namespace fg {
-    GLCurrentContext * getOrNewGLCurrentContext(
+    GLCurrent * getOrNewGLCurrent(
         GLContext &
         , Window &
     )
@@ -16,13 +16,13 @@ namespace fg {
     }
 
     void free(
-        GLCurrentContext &
+        GLCurrent &
     )
     {
     }
 
     void swapBuffers(
-        GLCurrentContext &
+        GLCurrent &
     )
     {
     }
