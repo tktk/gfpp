@@ -28,14 +28,14 @@ namespace fg {
     }
 }
 
-#define GL_DEFINE_FUNCTION( _proc, _name, _returnType, ... ) \
-    FGPP_GL_FUNCTION( _name, _returnType, __VA_ARGS__ ) { _proc }
-#define FGPP_GL_FUNCTION_NUM( _name, _returnType, ... ) \
-    GL_DEFINE_FUNCTION( return 0;, _name, _returnType, __VA_ARGS__ )
-#define FGPP_GL_FUNCTION_PTR( _name, _returnType, ... ) \
-    GL_DEFINE_FUNCTION( return nullptr;, _name, _returnType, __VA_ARGS__ )
-#define FGPP_GL_FUNCTION_VOID( _name, ... ) \
-    GL_DEFINE_FUNCTION( , _name, void, __VA_ARGS__ )
+#define GL_DEFINE_FUNCTION( _proc, _name, _returnType, _args ) \
+    FGPP_GL_FUNCTION( _name, _returnType, _args ) { _proc }
+#define FGPP_GL_FUNCTION_NUM( _name, _returnType, _args, _values ) \
+    GL_DEFINE_FUNCTION( return 0;, _name, _returnType, _args )
+#define FGPP_GL_FUNCTION_PTR( _name, _returnType, _args, _values ) \
+    GL_DEFINE_FUNCTION( return nullptr;, _name, _returnType, _args )
+#define FGPP_GL_FUNCTION_VOID( _name, _args, _values ) \
+    GL_DEFINE_FUNCTION( , _name, void, _args )
 namespace fg {
     FGPP_GL_FUNCTIONS
 }
