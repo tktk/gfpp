@@ -4,6 +4,7 @@
 #include "fgpp/window/closeevent.h"
 #include "fgpp/window/positionevent.h"
 #include "fgpp/window/sizeevent.h"
+#include "fgpp/window/paintevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/common/primitives.h"
 
@@ -78,11 +79,7 @@ namespace fg {
 
     void callPaintEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Int
-        , Int
-        , Int
-        , Int
+        , const WindowPaintEvent &
     )
     {
     }
