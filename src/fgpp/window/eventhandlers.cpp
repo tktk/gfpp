@@ -34,7 +34,7 @@ namespace fg {
 
     void callCloseEventHandler(
         const WindowEventHandlers &
-        , WindowCloseEvent &
+        , const WindowCloseEvent &
     )
     {
     }

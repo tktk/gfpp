@@ -8,7 +8,7 @@ namespace fg {
 
     typedef std::function<
         void(
-            WindowCloseEvent &
+            const WindowCloseEvent &
         )
     > WindowCloseEventHandler;
 }
@@ -30,7 +30,7 @@ namespace fg {
     );
 
     FGPPEXPORT Window & getSource(
-        WindowCloseEvent &
+        const WindowCloseEvent &
     );
 }
 

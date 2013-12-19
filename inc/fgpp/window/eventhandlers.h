@@ -88,7 +88,7 @@ namespace fg {
 
     FGPPEXPORT void callCloseEventHandler(
         const WindowEventHandlers &
-        , WindowCloseEvent &
+        , const WindowCloseEvent &
     );
 
     FGPPEXPORT void setPositionEventHandler(
