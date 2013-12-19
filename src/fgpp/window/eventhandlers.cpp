@@ -1,6 +1,7 @@
 ﻿#include "fgpp/util/export.h"
 #include "fgpp/window/eventhandlers.h"
 
+#include "fgpp/window/closeevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/common/primitives.h"
 
@@ -33,7 +34,7 @@ namespace fg {
 
     void callCloseEventHandler(
         const WindowEventHandlers &
-        , Window &
+        , WindowCloseEvent &
     )
     {
     }

@@ -5,6 +5,7 @@ namespace fg {
     struct WindowEventHandlers;
 }
 
+#include "fgpp/window/closeevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/window/key.h"
 #include "fgpp/common/primitives.h"
@@ -12,12 +13,6 @@ namespace fg {
 #include <functional>
 
 namespace fg {
-    typedef std::function<
-        void(
-            Window &
-        )
-    > WindowCloseEventHandler;
-
     typedef std::function<
         void(
             Window &
@@ -93,7 +88,7 @@ namespace fg {
 
     FGPPEXPORT void callCloseEventHandler(
         const WindowEventHandlers &
-        , Window &
+        , WindowCloseEvent &
     );
 
     FGPPEXPORT void setPositionEventHandler(
