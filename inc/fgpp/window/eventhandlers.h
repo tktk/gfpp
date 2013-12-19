@@ -7,6 +7,7 @@ namespace fg {
 
 #include "fgpp/window/closeevent.h"
 #include "fgpp/window/positionevent.h"
+#include "fgpp/window/sizeevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/window/key.h"
 #include "fgpp/common/primitives.h"
@@ -14,14 +15,6 @@ namespace fg {
 #include <functional>
 
 namespace fg {
-    typedef std::function<
-        void(
-            Window &
-            , Int
-            , Int
-        )
-    > WindowSizeEventHandler;
-
     typedef std::function<
         void(
             Window &
@@ -101,9 +94,7 @@ namespace fg {
 
     FGPPEXPORT void callSizeEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Int
-        , Int
+        , const WindowSizeEvent &
     );
 
     FGPPEXPORT void setPaintEventHandler(

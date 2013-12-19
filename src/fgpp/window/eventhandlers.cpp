@@ -2,6 +2,8 @@
 #include "fgpp/window/eventhandlers.h"
 
 #include "fgpp/window/closeevent.h"
+#include "fgpp/window/positionevent.h"
+#include "fgpp/window/sizeevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/common/primitives.h"
 
@@ -48,9 +50,7 @@ namespace fg {
 
     void callPositionEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Int
-        , Int
+        , const WindowPositionEvent &
     )
     {
     }
@@ -64,9 +64,7 @@ namespace fg {
 
     void callSizeEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Int
-        , Int
+        , const WindowSizeEvent &
     )
     {
     }
