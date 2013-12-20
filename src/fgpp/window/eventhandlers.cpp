@@ -5,6 +5,7 @@
 #include "fgpp/window/positionevent.h"
 #include "fgpp/window/sizeevent.h"
 #include "fgpp/window/paintevent.h"
+#include "fgpp/window/keyevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/common/primitives.h"
 
@@ -93,10 +94,7 @@ namespace fg {
 
     void callKeyEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Key
-        , const Utf32Char *
-        , Bool
+        , const WindowKeyEvent &
     )
     {
     }

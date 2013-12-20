@@ -9,6 +9,7 @@ namespace fg {
 #include "fgpp/window/positionevent.h"
 #include "fgpp/window/sizeevent.h"
 #include "fgpp/window/paintevent.h"
+#include "fgpp/window/keyevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/window/key.h"
 #include "fgpp/common/primitives.h"
@@ -16,15 +17,6 @@ namespace fg {
 #include <functional>
 
 namespace fg {
-    typedef std::function<
-        void(
-            Window &
-            , Key
-            , const Utf32Char *
-            , Bool
-        )
-    > WindowKeyEventHandler;
-
     typedef std::function<
         void(
             Window &
@@ -105,10 +97,7 @@ namespace fg {
 
     FGPPEXPORT void callKeyEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Key
-        , const Utf32Char *
-        , Bool
+        , const WindowKeyEvent &
     );
 
     FGPPEXPORT void setMouseButtonEventHandler(
