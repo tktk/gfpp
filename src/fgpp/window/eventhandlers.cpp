@@ -6,6 +6,7 @@
 #include "fgpp/window/sizeevent.h"
 #include "fgpp/window/paintevent.h"
 #include "fgpp/window/keyevent.h"
+#include "fgpp/window/mousebuttonevent.h"
 #include "fgpp/window/window.h"
 #include "fgpp/common/primitives.h"
 
@@ -108,11 +109,7 @@ namespace fg {
 
     void callMouseButtonEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , ULong
-        , Bool
-        , Int
-        , Int
+        , const WindowMouseButtonEvent &
     )
     {
     }
