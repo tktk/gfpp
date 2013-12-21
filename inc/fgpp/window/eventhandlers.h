@@ -11,22 +11,7 @@ namespace fg {
 #include "fgpp/window/paintevent.h"
 #include "fgpp/window/keyevent.h"
 #include "fgpp/window/mousebuttonevent.h"
-#include "fgpp/window/window.h"
-#include "fgpp/window/key.h"
-#include "fgpp/common/primitives.h"
-
-#include <functional>
-
-namespace fg {
-    typedef std::function<
-        void(
-            Window &
-            , Int
-            , Int
-        )
-    > WindowMouseMotionEventHandler;
-}
-
+#include "fgpp/window/mousemotionevent.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -108,9 +93,7 @@ namespace fg {
 
     FGPPEXPORT void callMouseMotionEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Int
-        , Int
+        , const WindowMouseMotionEvent &
     );
 }
 

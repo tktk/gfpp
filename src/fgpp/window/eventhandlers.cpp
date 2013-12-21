@@ -7,8 +7,7 @@
 #include "fgpp/window/paintevent.h"
 #include "fgpp/window/keyevent.h"
 #include "fgpp/window/mousebuttonevent.h"
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
+#include "fgpp/window/mousemotionevent.h"
 
 namespace fg {
     WindowEventHandlers * newWindowEventHandlers(
@@ -123,9 +122,7 @@ namespace fg {
 
     void callMouseMotionEventHandler(
         const WindowEventHandlers &
-        , Window &
-        , Int
-        , Int
+        , const WindowMouseMotionEvent &
     )
     {
     }
