@@ -1,5 +1,5 @@
-﻿#ifndef FGPP_WINDOW_KEY_H
-#define FGPP_WINDOW_KEY_H
+﻿#ifndef FGPP_DEF_WINDOW_KEY_H
+#define FGPP_DEF_WINDOW_KEY_H
 
 namespace fg {
     enum Key
@@ -210,4 +210,4 @@ namespace fg {
     };
 }
 
-#endif  // FGPP_WINDOW_KEY_H
+#endif  // FGPP_DEF_WINDOW_KEY_H

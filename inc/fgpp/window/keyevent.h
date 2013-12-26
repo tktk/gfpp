@@ -1,54 +1,59 @@
 ﻿#ifndef FGPP_WINDOW_KEYEVENT_H
 #define FGPP_WINDOW_KEYEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/keyevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/def/window/key.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowKeyEvent;
+    FGPP_FUNCTION_PTR(
+        WindowKeyEvent * newWindowKeyEvent(
+            Window &
+            , Key
+            , const Utf32Char *
+            , Bool
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowKeyEvent * clone(
             const WindowKeyEvent &
         )
-    > WindowKeyEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/window/key.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowKeyEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowKeyEvent * newWindowKeyEvent(
-        Window &
-        , Key
-        , const Utf32Char *
-        , Bool
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowKeyEvent &
+        )
+        , Window
+    )
 
-    FGPPEXPORT WindowKeyEvent * clone(
-        const WindowKeyEvent &
-    );
+    FGPP_FUNCTION(
+        Key getKey(
+            const WindowKeyEvent &
+        )
+        , return KEY_INVALID;
+    )
 
-    FGPPEXPORT void free(
-        WindowKeyEvent &
-    );
+    FGPP_FUNCTION_PTR(
+        const Utf32Char * getCharPtr(
+            const WindowKeyEvent &
+        )
+    )
 
-    FGPPEXPORT Window & getSource(
-        const WindowKeyEvent &
-    );
-
-    FGPPEXPORT Key getKey(
-        const WindowKeyEvent &
-    );
-
-    FGPPEXPORT const Utf32Char * getCharPtr(
-        const WindowKeyEvent &
-    );
-
-    FGPPEXPORT Bool getPressed(
-        const WindowKeyEvent &
-    );
+    FGPP_FUNCTION_BOOL(
+        Bool getPressed(
+            const WindowKeyEvent &
+        )
+    )
 }
 
 #endif  // FGPP_WINDOW_KEYEVENT_H
