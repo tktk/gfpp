@@ -1,260 +1,375 @@
 ﻿#ifndef GFPP_MAIN_BOOTCONFIG_H
 #define GFPP_MAIN_BOOTCONFIG_H
 
-namespace gf {
-    struct BootConfig;
-}
-
-#include "fgpp/gl/version.h"
-#include "fgpp/string/utf32.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+#include "gfpp/def/main/bootconfig.h"
+#include "fgpp/def/gl/version.h"
+#include "fgpp/def/string/utf32.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace gf {
-    FGPPEXPORT BootConfig * newBootConfig(
-    );
+    FGPP_FUNCTION_PTR(
+        BootConfig * newBootConfig(
+        )
+    )
 
-    FGPPEXPORT void free(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void free(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsBinDir(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsBinDir(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT const fg::Utf32 & getBinDir(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_REF(
+        const fg::Utf32 & getBinDir(
+            const BootConfig &
+        )
+        , const fg::Utf32
+    )
 
-    FGPPEXPORT fg::Bool setBinDir(
-        BootConfig &
-        , const fg::Utf32 &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool setBinDir(
+            BootConfig &
+            , const fg::Utf32 &
+        )
+    )
 
-    FGPPEXPORT void clearBinDir(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearBinDir(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLVersion(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLVersion(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::GLVersion getGLVersion(
-        const BootConfig &
-    );
+    FGPP_FUNCTION(
+        fg::GLVersion getGLVersion(
+            const BootConfig &
+        )
+        , return fg::GL_VERSION_INVALID;
+    )
 
-    FGPPEXPORT void setGLVersion(
-        BootConfig &
-        , fg::GLVersion
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLVersion(
+            BootConfig &
+            , fg::GLVersion
+        )
+    )
 
-    FGPPEXPORT void clearGLVersion(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLVersion(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLDoubleBuffer(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLDoubleBuffer(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool getGLDoubleBuffer(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool getGLDoubleBuffer(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLDoubleBuffer(
-        BootConfig &
-        , fg::Bool
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLDoubleBuffer(
+            BootConfig &
+            , fg::Bool
+        )
+    )
 
-    FGPPEXPORT void clearGLDoubleBuffer(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLDoubleBuffer(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLAuxBuffers(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLAuxBuffers(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLAuxBuffers(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLAuxBuffers(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLAuxBuffers(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLAuxBuffers(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLAuxBuffers(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLAuxBuffers(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLRedBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLRedBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLRedBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLRedBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLRedBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLRedBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLRedBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLRedBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLGreenBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLGreenBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLGreenBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLGreenBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLGreenBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLGreenBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLGreenBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLGreenBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLBlueBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLBlueBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLBlueBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLBlueBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLBlueBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLBlueBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLBlueBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLBlueBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLAlphaBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLAlphaBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLAlphaBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLAlphaBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLAlphaBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLAlphaBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLAlphaBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLAlphaBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLDepthBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLDepthBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLDepthBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLDepthBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLDepthBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLDepthBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLDepthBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLDepthBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLStencilBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLStencilBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLStencilBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLStencilBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLStencilBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLStencilBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLStencilBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLStencilBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLAccumRedBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLAccumRedBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLAccumRedBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLAccumRedBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLAccumRedBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLAccumRedBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLAccumRedBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLAccumRedBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLAccumGreenBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLAccumGreenBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLAccumGreenBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLAccumGreenBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLAccumGreenBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLAccumGreenBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLAccumGreenBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLAccumGreenBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLAccumBlueBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLAccumBlueBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLAccumBlueBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLAccumBlueBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLAccumBlueBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLAccumBlueBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLAccumBlueBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLAccumBlueBits(
+            BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Bool existsGLAccumAlphaBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_BOOL(
+        fg::Bool existsGLAccumAlphaBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT fg::Int getGLAccumAlphaBits(
-        const BootConfig &
-    );
+    FGPP_FUNCTION_NUM(
+        fg::Int getGLAccumAlphaBits(
+            const BootConfig &
+        )
+    )
 
-    FGPPEXPORT void setGLAccumAlphaBits(
-        BootConfig &
-        , fg::Int
-    );
+    FGPP_FUNCTION_VOID(
+        void setGLAccumAlphaBits(
+            BootConfig &
+            , fg::Int
+        )
+    )
 
-    FGPPEXPORT void clearGLAccumAlphaBits(
-        BootConfig &
-    );
+    FGPP_FUNCTION_VOID(
+        void clearGLAccumAlphaBits(
+            BootConfig &
+        )
+    )
 }
 
 #endif  // GFPP_MAIN_BOOTCONFIG_H
