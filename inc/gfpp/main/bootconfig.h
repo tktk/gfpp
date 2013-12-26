@@ -5,7 +5,7 @@
 #include "fgpp/def/gl/version.h"
 #include "fgpp/def/string/utf32.h"
 #include "fgpp/def/common/primitives.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace gf {
     FGPP_FUNCTION_PTR(

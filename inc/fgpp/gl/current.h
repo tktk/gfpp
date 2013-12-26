@@ -5,7 +5,7 @@
 #include "fgpp/def/gl/context.h"
 #include "fgpp/def/gl/functions.h"
 #include "fgpp/def/window/window.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace fg {
     FGPP_FUNCTION_PTR(

@@ -9,7 +9,7 @@
 #include "fgpp/def/window/keyevent.h"
 #include "fgpp/def/window/mousebuttonevent.h"
 #include "fgpp/def/window/mousemotionevent.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace fg {
     FGPP_FUNCTION_PTR(

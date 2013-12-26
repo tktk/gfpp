@@ -5,7 +5,7 @@
 #include "fgpp/def/window/eventhandlers.h"
 #include "fgpp/def/string/utf32.h"
 #include "fgpp/def/common/primitives.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace fg {
     FGPP_FUNCTION_PTR(

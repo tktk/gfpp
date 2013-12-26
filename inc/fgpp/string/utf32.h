@@ -6,7 +6,7 @@
 #include "fgpp/def/string/utf8.h"
 #include "fgpp/def/string/utf16.h"
 #include "fgpp/def/common/primitives.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace fg {
     FGPP_FUNCTION_PTR(

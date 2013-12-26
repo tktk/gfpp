@@ -3,7 +3,7 @@
 
 #include "gfpp/def/main/library.h"
 #include "fgpp/def/string/utf32.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace gf {
     FGPP_FUNCTION_PTR(

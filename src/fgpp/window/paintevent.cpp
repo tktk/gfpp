@@ -1,2 +1,2 @@
-﻿#include "fgpp/util/export_new.h"
+﻿#include "fgpp/util/export.h"
 #include "fgpp/window/paintevent.h"

@@ -3,7 +3,7 @@
 
 #include "fgpp/def/main/args.h"
 #include "gfpp/def/main/bootconfig.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace gf {
     FGPP_FUNCTION_PTR(

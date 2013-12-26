@@ -3,7 +3,7 @@
 
 #include "fgpp/def/gl/context.h"
 #include "fgpp/def/gl/config.h"
-#include "fgpp/util/import_new.h"
+#include "fgpp/util/import.h"
 
 namespace fg {
     FGPP_FUNCTION_PTR(
