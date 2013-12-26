@@ -1,6 +1,5 @@
-﻿//REMOVEME
-#ifndef FGPP_COMMON_PRIMITIVES_H
-#define FGPP_COMMON_PRIMITIVES_H
+﻿#ifndef FGPP_DEF_COMMON_PRIMITIVES_H
+#define FGPP_DEF_COMMON_PRIMITIVES_H
 
 #include <cstddef>
 
@@ -27,4 +26,4 @@ namespace fg {
     typedef char32_t Utf32Char;
 }
 
-#endif  // FGPP_COMMON_PRIMITIVES_H
+#endif  // FGPP_DEF_COMMON_PRIMITIVES_H
