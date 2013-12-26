@@ -1,48 +1,50 @@
 ﻿#ifndef FGPP_WINDOW_MOUSEMOTIONEVENT_H
 #define FGPP_WINDOW_MOUSEMOTIONEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/mousemotionevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowMouseMotionEvent;
+    FGPP_FUNCTION_PTR(
+        WindowMouseMotionEvent * newWindowMouseMotionEvent(
+            Window &
+            , Int
+            , Int
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowMouseMotionEvent * clone(
             const WindowMouseMotionEvent &
         )
-    > WindowMouseMotionEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowMouseMotionEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowMouseMotionEvent * newWindowMouseMotionEvent(
-        Window &
-        , Int
-        , Int
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowMouseMotionEvent &
+        )
+        , Window
+    )
 
-    FGPPEXPORT WindowMouseMotionEvent * clone(
-        const WindowMouseMotionEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getX(
+            const WindowMouseMotionEvent &
+        )
+    )
 
-    FGPPEXPORT void free(
-        WindowMouseMotionEvent &
-    );
-
-    FGPPEXPORT Window & getSource(
-        const WindowMouseMotionEvent &
-    );
-
-    FGPPEXPORT Int getX(
-        const WindowMouseMotionEvent &
-    );
-
-    FGPPEXPORT Int getY(
-        const WindowMouseMotionEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getY(
+            const WindowMouseMotionEvent &
+        )
+    )
 }
 
 #endif  // FGPP_WINDOW_MOUSEMOTIONEVENT_H
