@@ -1,58 +1,64 @@
 ﻿#ifndef FGPP_WINDOW_PAINTEVENT_H
 #define FGPP_WINDOW_PAINTEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/paintevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowPaintEvent;
+    FGPP_FUNCTION_PTR(
+        WindowPaintEvent * newWindowPaintEvent(
+            Window &
+            , Int
+            , Int
+            , Int
+            , Int
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowPaintEvent * clone(
             const WindowPaintEvent &
         )
-    > WindowPaintEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowPaintEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowPaintEvent * newWindowPaintEvent(
-        Window &
-        , Int
-        , Int
-        , Int
-        , Int
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowPaintEvent &
+        )
+        , Window
+    )
 
-    FGPPEXPORT WindowPaintEvent * clone(
-        const WindowPaintEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getX(
+            const WindowPaintEvent &
+        )
+    )
 
-    FGPPEXPORT void free(
-        WindowPaintEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getY(
+            const WindowPaintEvent &
+        )
+    )
 
-    FGPPEXPORT Window & getSource(
-        const WindowPaintEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getWidth(
+            const WindowPaintEvent &
+        )
+    )
 
-    FGPPEXPORT Int getX(
-        const WindowPaintEvent &
-    );
-
-    FGPPEXPORT Int getY(
-        const WindowPaintEvent &
-    );
-
-    FGPPEXPORT Int getWidth(
-        const WindowPaintEvent &
-    );
-
-    FGPPEXPORT Int getHeight(
-        const WindowPaintEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getHeight(
+            const WindowPaintEvent &
+        )
+    )
 }
 
 #endif  // FGPP_WINDOW_PAINTEVENT_H
