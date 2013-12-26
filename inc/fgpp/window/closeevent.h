@@ -1,37 +1,35 @@
 ﻿#ifndef FGPP_WINDOW_CLOSEEVENT_H
 #define FGPP_WINDOW_CLOSEEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/closeevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowCloseEvent;
+    FGPP_FUNCTION_PTR(
+        WindowCloseEvent * newWindowCloseEvent(
+            Window &
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowCloseEvent * clone(
             const WindowCloseEvent &
         )
-    > WindowCloseEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowCloseEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowCloseEvent * newWindowCloseEvent(
-        Window &
-    );
-
-    FGPPEXPORT WindowCloseEvent * clone(
-        const WindowCloseEvent &
-    );
-
-    FGPPEXPORT void free(
-        WindowCloseEvent &
-    );
-
-    FGPPEXPORT Window & getSource(
-        const WindowCloseEvent &
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowCloseEvent &
+        )
+        , Window
+    )
 }
 
 #endif  // FGPP_WINDOW_CLOSEEVENT_H

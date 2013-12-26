@@ -15,5 +15,7 @@
     FGPP_DEFINE_FUNCTION( _func, return nullptr; )
 #define FGPP_FUNCTION_BOOL( _func ) \
     FGPP_DEFINE_FUNCTION( _func, return false; )
+#define FGPP_FUNCTION_REF( _func, _type ) \
+    FGPP_DEFINE_FUNCTION( _func, _type * tmp = nullptr; return *tmp; )
 
 #endif  // FGPP_UTIL_EXPORT_NEW_H

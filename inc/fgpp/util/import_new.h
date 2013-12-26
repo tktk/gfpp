@@ -17,6 +17,8 @@
         FGPP_DECLARE_FUNCTION( _func )
 #   define FGPP_FUNCTION_BOOL( _func ) \
         FGPP_DECLARE_FUNCTION( _func )
+#   define FGPP_FUNCTION_REF( _func, _type ) \
+        FGPP_DECLARE_FUNCTION( _func )
 
 #endif  // FGPP_DEFINE_FUNCTION
 
