@@ -1,58 +1,64 @@
 ﻿#ifndef FGPP_WINDOW_MOUSEBUTTONEVENT_H
 #define FGPP_WINDOW_MOUSEBUTTONEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/mousebuttonevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowMouseButtonEvent;
+    FGPP_FUNCTION_PTR(
+        WindowMouseButtonEvent * newWindowMouseButtonEvent(
+            Window &
+            , ULong
+            , Bool
+            , Int
+            , Int
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowMouseButtonEvent * clone(
             const WindowMouseButtonEvent &
         )
-    > WindowMouseButtonEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowMouseButtonEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowMouseButtonEvent * newWindowMouseButtonEvent(
-        Window &
-        , ULong
-        , Bool
-        , Int
-        , Int
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowMouseButtonEvent &
+        )
+        , Window
+    )
 
-    FGPPEXPORT WindowMouseButtonEvent * clone(
-        const WindowMouseButtonEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        ULong getIndex(
+            const WindowMouseButtonEvent &
+        )
+    )
 
-    FGPPEXPORT void free(
-        WindowMouseButtonEvent &
-    );
+    FGPP_FUNCTION_BOOL(
+        Bool getPressed(
+            const WindowMouseButtonEvent &
+        )
+    )
 
-    FGPPEXPORT Window & getSource(
-        const WindowMouseButtonEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getX(
+            const WindowMouseButtonEvent &
+        )
+    )
 
-    FGPPEXPORT ULong getIndex(
-        const WindowMouseButtonEvent &
-    );
-
-    FGPPEXPORT Bool getPressed(
-        const WindowMouseButtonEvent &
-    );
-
-    FGPPEXPORT Int getX(
-        const WindowMouseButtonEvent &
-    );
-
-    FGPPEXPORT Int getY(
-        const WindowMouseButtonEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getY(
+            const WindowMouseButtonEvent &
+        )
+    )
 }
 
 #endif  // FGPP_WINDOW_MOUSEBUTTONEVENT_H
