@@ -1,48 +1,50 @@
 ﻿#ifndef FGPP_WINDOW_POSITIONEVENT_H
 #define FGPP_WINDOW_POSITIONEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/positionevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowPositionEvent;
+    FGPP_FUNCTION_PTR(
+        WindowPositionEvent * newWindowPositionEvent(
+            Window &
+            , Int
+            , Int
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowPositionEvent * clone(
             const WindowPositionEvent &
         )
-    > WindowPositionEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowPositionEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowPositionEvent * newWindowPositionEvent(
-        Window &
-        , Int
-        , Int
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowPositionEvent &
+        )
+        , Window
+    )
 
-    FGPPEXPORT WindowPositionEvent * clone(
-        const WindowPositionEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getX(
+            const WindowPositionEvent &
+        )
+    )
 
-    FGPPEXPORT void free(
-        WindowPositionEvent &
-    );
-
-    FGPPEXPORT Window & getSource(
-        const WindowPositionEvent &
-    );
-
-    FGPPEXPORT Int getX(
-        const WindowPositionEvent &
-    );
-
-    FGPPEXPORT Int getY(
-        const WindowPositionEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getY(
+            const WindowPositionEvent &
+        )
+    )
 }
 
 #endif  // FGPP_WINDOW_POSITIONEVENT_H
