@@ -1,9 +1,8 @@
 ﻿#ifndef FGPP_GL_GL_H
 #define FGPP_GL_GL_H
 
-#include "fgpp/gl/types.h"
-#include "fgpp/gl/constants.h"
-#include "fgpp/gl/context.h"
+#include "fgpp/def/gl/types.h"
+#include "fgpp/def/gl/constants.h"
 #include "fgpp/gl/current.h"
 
 #endif  // FGPP_GL_GL_H
