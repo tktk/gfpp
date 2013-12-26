@@ -1,17 +1,16 @@
 ﻿#ifndef FGPP_MAIN_ARGS_H
 #define FGPP_MAIN_ARGS_H
 
-namespace fg {
-    struct Args;
-}
-
-#include "fgpp/gl/config.h"
-#include "fgpp/util/import.h"
+#include "fgpp/def/main/args.h"
+#include "fgpp/def/gl/config.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    FGPPEXPORT const GLConfig * getGLConfig(
-        const Args &
-    );
+    FGPP_FUNCTION_PTR(
+        const GLConfig * getGLConfig(
+            const Args &
+        )
+    )
 }
 
 #endif  // FGPP_MAIN_ARGS_H

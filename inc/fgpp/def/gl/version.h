@@ -1,6 +1,5 @@
-﻿//REMOVEME
-#ifndef FGPP_GL_VERSION_H
-#define FGPP_GL_VERSION_H
+﻿#ifndef FGPP_DEF_GL_VERSION_H
+#define FGPP_DEF_GL_VERSION_H
 
 namespace fg {
     enum GLVersion
@@ -53,4 +52,4 @@ namespace fg {
     };
 }
 
-#endif  // FGPP_GL_VERSION_H
+#endif  // FGPP_DEF_GL_VERSION_H
