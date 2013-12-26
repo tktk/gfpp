@@ -1,43 +1,44 @@
 ﻿#ifndef FGPP_GL_CURRENT_H
 #define FGPP_GL_CURRENT_H
 
-namespace fg {
-    struct GLCurrent;
-}
-
-#include "fgpp/gl/context.h"
-#include "fgpp/gl/functions.h"
-#include "fgpp/window/window.h"
-#include "fgpp/util/import.h"
+#include "fgpp/def/gl/current.h"
+#include "fgpp/def/gl/context.h"
+#include "fgpp/def/gl/functions.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    FGPPEXPORT GLCurrent * getOrNewGLCurrent(
-        GLContext &
-        , Window &
-    );
+    FGPP_FUNCTION_PTR(
+        GLCurrent * getOrNewGLCurrent(
+            GLContext &
+            , Window &
+        )
+    )
 
-    FGPPEXPORT void free(
-        GLCurrent &
-    );
+    FGPP_FUNCTION_VOID(
+        void free(
+            GLCurrent &
+        )
+    )
 
-    FGPPEXPORT void swapBuffers(
-        GLCurrent &
-    );
+    FGPP_FUNCTION_VOID(
+        void swapBuffers(
+            GLCurrent &
+        )
+    )
 
 #define FGPP_GL_FUNCTION_NAME( _name ) gl##_name
-#define FGPP_GL_ARGS( ... ) \
-    GLCurrent & __VA_ARGS__
-#define FGPP_GL_FUNCTION( _name, _returnType, _args ) \
-    _returnType FGPP_GL_FUNCTION_NAME( _name )( FGPP_GL_ARGS _args )
 
-#define GL_DECLARE_FUNCTION( _name, _returnType, _args ) \
-    FGPPEXPORT FGPP_GL_FUNCTION( _name, _returnType, _args );
+#define GL_ARGS( ... ) \
+    GLCurrent & __VA_ARGS__
+#define GL_DECLARE_FUNCTION( _macro, _name, _returnType, _args ) \
+    _macro( _returnType FGPP_GL_FUNCTION_NAME( _name )( GL_ARGS _args ) )
 #define FGPP_GL_FUNCTION_NUM( _name, _returnType, _args, _values ) \
-    GL_DECLARE_FUNCTION( _name, _returnType, _args )
+    GL_DECLARE_FUNCTION( FGPP_FUNCTION_NUM, _name, _returnType, _args )
 #define FGPP_GL_FUNCTION_PTR( _name, _returnType, _args, _values ) \
-    GL_DECLARE_FUNCTION( _name, _returnType, _args )
+    GL_DECLARE_FUNCTION( FGPP_FUNCTION_PTR, _name, _returnType, _args )
 #define FGPP_GL_FUNCTION_VOID( _name, _args, _values ) \
-    GL_DECLARE_FUNCTION( _name, void, _args )
+    GL_DECLARE_FUNCTION( FGPP_FUNCTION_VOID, _name, void, _args )
 
     FGPP_GL_FUNCTIONS
 
@@ -45,6 +46,7 @@ namespace fg {
 #undef  FGPP_GL_FUNCTION_PTR
 #undef  FGPP_GL_FUNCTION_NUM
 #undef  GL_DECLARE_FUNCTION
+#undef  GL_ARGS
 }
 
 #endif  // FGPP_GL_CURRENT_H
