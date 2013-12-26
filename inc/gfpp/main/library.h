@@ -1,27 +1,30 @@
 ﻿#ifndef GFPP_MAIN_LIBRARY_H
 #define GFPP_MAIN_LIBRARY_H
 
-namespace gf {
-    struct Library;
-}
-
-#include "fgpp/string/utf32.h"
-#include "fgpp/util/import.h"
+#include "gfpp/def/main/library.h"
+#include "fgpp/def/string/utf32.h"
+#include "fgpp/util/import_new.h"
 
 namespace gf {
-    FGPPEXPORT Library * newLibrary(
-        const fg::Utf32 &
-        , const fg::Utf32 &
-    );
+    FGPP_FUNCTION_PTR(
+        Library * newLibrary(
+            const fg::Utf32 &
+            , const fg::Utf32 &
+        )
+    )
 
-    FGPPEXPORT void free(
-        Library &
-    );
+    FGPP_FUNCTION_VOID(
+        void free(
+            Library &
+        )
+    )
 
-    FGPPEXPORT void * getAddress(
-        Library &
-        , const fg::Utf32 &
-    );
+    FGPP_FUNCTION_PTR(
+        void * getAddress(
+            Library &
+            , const fg::Utf32 &
+        )
+    )
 }
 
 #endif  // GFPP_MAIN_LIBRARY_H
