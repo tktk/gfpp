@@ -1,48 +1,50 @@
 ﻿#ifndef FGPP_WINDOW_SIZEEVENT_H
 #define FGPP_WINDOW_SIZEEVENT_H
 
-#include <functional>
+#include "fgpp/def/window/sizeevent.h"
+#include "fgpp/def/window/window.h"
+#include "fgpp/def/common/primitives.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    struct WindowSizeEvent;
+    FGPP_FUNCTION_PTR(
+        WindowSizeEvent * newWindowSizeEvent(
+            Window &
+            , Int
+            , Int
+        )
+    )
 
-    typedef std::function<
-        void(
+    FGPP_FUNCTION_PTR(
+        WindowSizeEvent * clone(
             const WindowSizeEvent &
         )
-    > WindowSizeEventHandler;
-}
+    )
 
-#include "fgpp/window/window.h"
-#include "fgpp/common/primitives.h"
-#include "fgpp/util/import.h"
+    FGPP_FUNCTION_VOID(
+        void free(
+            WindowSizeEvent &
+        )
+    )
 
-namespace fg {
-    FGPPEXPORT WindowSizeEvent * newWindowSizeEvent(
-        Window &
-        , Int
-        , Int
-    );
+    FGPP_FUNCTION_REF(
+        Window & getSource(
+            const WindowSizeEvent &
+        )
+        , Window
+    )
 
-    FGPPEXPORT WindowSizeEvent * clone(
-        const WindowSizeEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getWidth(
+            const WindowSizeEvent &
+        )
+    )
 
-    FGPPEXPORT void free(
-        WindowSizeEvent &
-    );
-
-    FGPPEXPORT Window & getSource(
-        const WindowSizeEvent &
-    );
-
-    FGPPEXPORT Int getWidth(
-        const WindowSizeEvent &
-    );
-
-    FGPPEXPORT Int getHeight(
-        const WindowSizeEvent &
-    );
+    FGPP_FUNCTION_NUM(
+        Int getHeight(
+            const WindowSizeEvent &
+        )
+    )
 }
 
 #endif  // FGPP_WINDOW_SIZEEVENT_H
