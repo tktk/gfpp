@@ -1,21 +1,22 @@
 ﻿#ifndef FGPP_GL_CONTEXT_H
 #define FGPP_GL_CONTEXT_H
 
-namespace fg {
-    struct GLContext;
-}
-
-#include "fgpp/gl/config.h"
-#include "fgpp/util/import.h"
+#include "fgpp/def/gl/context.h"
+#include "fgpp/def/gl/config.h"
+#include "fgpp/util/import_new.h"
 
 namespace fg {
-    FGPPEXPORT GLContext * newGLContext(
-        const GLConfig &
-    );
+    FGPP_FUNCTION_PTR(
+        GLContext * newGLContext(
+            const GLConfig &
+        )
+    )
 
-    FGPPEXPORT void free(
-        GLContext &
-    );
+    FGPP_FUNCTION_VOID(
+        void free(
+            GLContext &
+        )
+    )
 }
 
 #endif  // FGPP_GL_CONTEXT_H
