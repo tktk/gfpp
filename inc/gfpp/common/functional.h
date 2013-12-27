@@ -1,7 +1,7 @@
 ﻿#ifndef GFPP_COMMON_FUNCTIONAL_H
 #define GFPP_COMMON_FUNCTIONAL_H
 
-#include "fgpp/common/primitives.h"
+#include "fgpp/def/common/primitives.h"
 
 namespace gf {
     template< typename T >

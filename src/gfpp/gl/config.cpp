@@ -1,2 +1,2 @@
-﻿#include "fgpp/util/export.h"
+﻿#include "fgpp/util/exportdummy.h"
 #include "gfpp/gl/config.h"
