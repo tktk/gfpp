@@ -4,6 +4,7 @@
 #include "fgpp/def/window/sizeevent.h"
 #include "fgpp/def/window/window.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -45,6 +46,14 @@ namespace fg {
             const WindowSizeEvent &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::WindowSizeEvent &   _event
+)
+{
+    fg::free( _event );
 }
 
 #endif  // FGPP_WINDOW_SIZEEVENT_H

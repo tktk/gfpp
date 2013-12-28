@@ -9,6 +9,7 @@
 #include "fgpp/def/window/keyevent.h"
 #include "fgpp/def/window/mousebuttonevent.h"
 #include "fgpp/def/window/mousemotionevent.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -126,6 +127,14 @@ namespace fg {
             , const WindowMouseMotionEvent &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::WindowEventHandlers &   _eventHandlers
+)
+{
+    fg::free( _eventHandlers );
 }
 
 #endif  // FGPP_WINDOW_EVENTHANDLERS_H

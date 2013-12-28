@@ -4,6 +4,7 @@
 #include "fgpp/def/window/mousebuttonevent.h"
 #include "fgpp/def/window/window.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -59,6 +60,14 @@ namespace fg {
             const WindowMouseButtonEvent &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::WindowMouseButtonEvent &    _event
+)
+{
+    fg::free( _event );
 }
 
 #endif  // FGPP_WINDOW_MOUSEBUTTONEVENT_H

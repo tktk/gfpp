@@ -6,6 +6,7 @@
 #include "fgpp/def/string/utf8.h"
 #include "fgpp/def/string/utf32.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -269,6 +270,14 @@ namespace fg {
             , const Utf16 &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::Utf16 & _utf16
+)
+{
+    fg::free( _utf16 );
 }
 
 #endif  // FGPP_STRING_UTF16_H

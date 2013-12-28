@@ -3,6 +3,7 @@
 
 #include "fgpp/def/main/args.h"
 #include "gfpp/def/main/bootconfig.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace gf {
@@ -17,6 +18,14 @@ namespace gf {
             fg::Args &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::Args &  _args
+)
+{
+    gf::free( _args );
 }
 
 #endif  // GFPP_MAIN_ARGS_H

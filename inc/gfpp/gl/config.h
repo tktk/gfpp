@@ -4,6 +4,7 @@
 #include "fgpp/def/gl/config.h"
 #include "fgpp/def/gl/version.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace gf {
@@ -174,6 +175,14 @@ namespace gf {
             fg::GLConfig &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::GLConfig &  _config
+)
+{
+    gf::free( _config );
 }
 
 #endif  // GFPP_GL_CONFIG_H

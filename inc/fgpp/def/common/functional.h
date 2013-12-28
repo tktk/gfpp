@@ -1,9 +1,23 @@
-﻿#ifndef GFPP_COMMON_FUNCTIONAL_H
-#define GFPP_COMMON_FUNCTIONAL_H
+﻿#ifndef FGPP_DEF_COMMON_FUNCTIONAL_H
+#define FGPP_DEF_COMMON_FUNCTIONAL_H
 
 #include "fgpp/def/common/primitives.h"
 
-namespace gf {
+template< typename T >
+void fgFree(
+    T &
+);
+
+template<
+    typename KEY1_T
+    , typename KEY2_T
+>
+fg::Bool fgLess(
+    const KEY1_T &
+    , const KEY2_T &
+);
+
+namespace fg {
     template< typename T >
     struct Free
     {
@@ -11,7 +25,7 @@ namespace gf {
             T   _obj
         ) const
         {
-            free( *_obj );
+            fgFree( *_obj );
         }
     };
 
@@ -21,12 +35,12 @@ namespace gf {
     >
     struct Less
     {
-        fg::Bool operator()(
+        Bool operator()(
             const KEY1_T &      _KEY1
             , const KEY2_T &    _KEY2
         ) const
         {
-            return less(
+            return fgLess(
                 *_KEY1
                 , *_KEY2
             );
@@ -34,4 +48,4 @@ namespace gf {
     };
 }
 
-#endif  // GFPP_COMMON_FUNCTIONAL_H
+#endif  // FGPP_DEF_COMMON_FUNCTIONAL_H

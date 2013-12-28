@@ -5,6 +5,7 @@
 #include "fgpp/def/window/eventhandlers.h"
 #include "fgpp/def/string/utf32.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -67,6 +68,14 @@ namespace fg {
             Window &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::Window &    _window
+)
+{
+    fg::free( _window );
 }
 
 #endif  // FGPP_WINDOW_WINDOW_H

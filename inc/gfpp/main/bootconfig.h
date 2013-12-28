@@ -5,6 +5,7 @@
 #include "fgpp/def/gl/version.h"
 #include "fgpp/def/string/utf32.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace gf {
@@ -370,6 +371,14 @@ namespace gf {
             BootConfig &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    gf::BootConfig &    _config
+)
+{
+    gf::free( _config );
 }
 
 #endif  // GFPP_MAIN_BOOTCONFIG_H

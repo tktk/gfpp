@@ -5,6 +5,7 @@
 #include "fgpp/def/gl/context.h"
 #include "fgpp/def/gl/functions.h"
 #include "fgpp/def/window/window.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -47,6 +48,14 @@ namespace fg {
 #undef  FGPP_GL_FUNCTION_NUM
 #undef  GL_DECLARE_FUNCTION
 #undef  GL_ARGS
+}
+
+template<>
+inline void fgFree(
+    fg::GLCurrent & _current
+)
+{
+    fg::free( _current );
 }
 
 #endif  // FGPP_GL_CURRENT_H

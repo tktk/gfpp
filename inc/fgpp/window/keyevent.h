@@ -5,6 +5,7 @@
 #include "fgpp/def/window/window.h"
 #include "fgpp/def/window/key.h"
 #include "fgpp/def/common/primitives.h"
+#include "fgpp/def/common/functional.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -54,6 +55,14 @@ namespace fg {
             const WindowKeyEvent &
         )
     )
+}
+
+template<>
+inline void fgFree(
+    fg::WindowKeyEvent &    _event
+)
+{
+    fg::free( _event );
 }
 
 #endif  // FGPP_WINDOW_KEYEVENT_H
